@@ -1,0 +1,13 @@
+form {
+  .form-control {
+    outline: none !important;
+    box-shadow: none !important;
+    &:focus {
+
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+}

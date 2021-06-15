@@ -1,0 +1,17 @@
+.error404 {
+  position: relative;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__subtext {
+    margin-bottom: 2rem;
+    @include media-breakpoint-down(sm) {
+      br {
+        display: none;
+      }
+    }
+  }
+}

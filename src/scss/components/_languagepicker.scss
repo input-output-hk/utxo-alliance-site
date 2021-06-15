@@ -1,0 +1,115 @@
+.languagepicker.dropdown {
+  position: absolute;
+  top: 5px; right: $single-gutter;
+
+  @include media-breakpoint-down(sm) {
+    top: -2px;
+  }
+
+  $desk-width: 120px;
+  $mob-width: 60px;
+
+  width: $mob-width;
+
+  .dropdown-toggle {
+    width: $mob-width;
+    text-align: left;
+    border: 1px solid $gray-400;
+    background-color: $gray-200;
+    color: $black;
+
+    font-size: 13px;
+    padding: 0.5rem 0.75rem 0.5625rem 0.75rem;
+    position: relative;
+    svg {
+      margin-right: 5px;
+    }
+    &:focus, &:active {
+      outline: none;
+      box-shadow: none;
+    }
+    span {
+      display: none;
+    }
+    &:after {
+      display: inline-block;
+      content: '';
+      width: 12px; height: 7px;
+      border: none;
+      background-image: url("#{$img-path}/chevron-down.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 14px; right: 7px;
+      @include transition(all 0.25s);
+      margin: 0;
+    }
+  }
+
+  &.show {
+    .dropdown-toggle {
+      border-bottom: 1px solid transparent!important;
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: -1px;
+    background-color: $gray-200;
+    border-top: 1px solid transparent;
+    border-left: 1px solid $gray-400;
+    border-right: 1px solid $gray-400;
+    border-bottom: 1px solid $gray-400;
+    width: 100%;
+    min-width: auto;
+    padding-bottom: 0;
+    padding-top: 0;
+    .dropdown-item {
+      width: 100%;
+      padding: 0.5rem 0.75rem 0.5625rem 0.75rem;
+      color: $black;
+      background-color: $gray-200;
+      box-sizing: border-box;
+      @include transition(all 0.15s);
+      &[aria-current="page"] {
+        display: none;
+      }
+      span {
+        display: none;
+        font-size: 13px;
+      }
+      svg {
+        margin-right: 5px;
+      }
+      &:hover {
+        background-color: $gray-300;
+        color: $black;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+
+    width: $desk-width;
+    margin-right: 2rem;
+    .dropdown-toggle {
+      width: $desk-width;
+      span {
+        display: inline-block;
+      }
+      &:after {
+        right: 10px;
+      }
+    }
+    .dropdown-menu {
+      .dropdown-item {
+        span {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+}

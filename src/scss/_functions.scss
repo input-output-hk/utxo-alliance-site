@@ -1,0 +1,79 @@
+@function rem($size) {
+  @if $size == 0 {
+    @return 0;
+  }
+
+  @if $size == px {
+    @return 1px;
+  }
+
+  @return $size / 16 * 1rem;
+}
+
+@function spacer($size) {
+  @if $size == 0 {
+    @return 0;
+  }
+
+  @if $size == px {
+    @return 1px;
+  }
+
+  @if $size == auto {
+    @return auto;
+  }
+
+  @return $spacer * $size;
+}
+
+@function spacing($size1, $size2: null, $size3: null, $size4: null) {
+  $spacing: spacer($size1);
+
+  @if type-of($size2) == 'null' {
+    @return $spacing;
+  }
+
+  $spacing: $spacing spacer($size2);
+
+  @if type-of($size3) == 'null' {
+    @return $spacing;
+  }
+
+  $spacing: $spacing spacer($size3);
+
+  @if type-of($size4) == 'null' {
+    @return $spacing;
+  }
+
+  $spacing: $spacing spacer($size4);
+
+  @return $spacing;
+}
+
+@function is-list($variable) {
+  @return type-of($variable) == list;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@function str-split($string, $delimiter: ',') {
+  $split-array: ();
+  $index: str-index($string, $delimiter);
+
+  @while $index != null {
+    $item: str-slice($string, 1, $index - 1);
+    $split-array: append($split-array, $item);
+    $string: str-slice($string, $index + 1);
+    $index: str-index($string, $delimiter);
+  }
+
+  $split-array: append($split-array, $string);
+
+  @return $split-array;
+}
