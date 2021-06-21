@@ -38,7 +38,8 @@
 
   &__text {
     max-width: 24em;
-    margin-left: 3.75em;
+    @include rfs(rem(60), margin-left);
+    margin-bottom: 0;
     color: $color-5;
   }
 }

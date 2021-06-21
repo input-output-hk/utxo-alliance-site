@@ -5,6 +5,8 @@ import { graphql } from 'gatsby'
 import { What } from '../components/What'
 import { Why } from '../components/Why'
 import { Who } from '../components/Who'
+import { Members } from '../components/Members'
+import picturesElementPng from '../assets/images/pictures-element.png'
 
 // markup
 const IndexPage = ({ intl, data }) => {
@@ -12,22 +14,22 @@ const IndexPage = ({ intl, data }) => {
     <Layout data={data}>
       <hr />
 
-      <What />
-      <Why />
-      <Who />
+      <div className="pictures-element">
+        <img
+          className="pictures-element__image"
+          src={picturesElementPng}
+          alt=""
+        />
+
+        <What />
+        <Why />
+        <Who />
+      </div>
+
+      <Members />
 
       <div className="container">
         {/* <h1>Home - {intl.formatMessage({ id: 'title' })}</h1> */}
-
-        <h2>Members</h2>
-
-        <p>
-          We provide a forum for open dialogue between key stakeholders
-          developing utxo based blockchains with a view to developing common
-          tools and techniques to evolve the standard over time.
-        </p>
-
-        <hr />
 
         <span>6 minutes video</span>
 

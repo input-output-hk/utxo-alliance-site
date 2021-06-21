@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+.pictures-element {
+  &__image {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+
+    &__image {
+      position: absolute;
+      top: 50%;
+      right: $container-padding-x;
+      display: block;
+      @include rfs(rem(580), width);
+      max-width: 42.5%;
+      transform: translateY(-50%);
+      z-index: 20;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__image {
+      right: 50%;
+      transform: translate(100%, -50%);
+    }
+  }
+}

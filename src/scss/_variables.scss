@@ -31,11 +31,7 @@ $theme-colors: ();
 
 // Grid containers
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
   xl: 1140px,
-  xxl: 1320px,
 );
 
 // Links
@@ -86,5 +82,5 @@ $lead-font-weight: 300;
 $small-font-size: 0.875em;
 
 // RFS
-// $rfs-base-value: 1.5rem;
-$enable-rfs: false;
+$rfs-base-value: 1.5rem;
+$enable-rfs: true;
