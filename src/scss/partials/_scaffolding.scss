@@ -8,8 +8,14 @@ img {
   height: auto;
 }
 
+figure {
+  margin: 0;
+}
+
 button {
   padding: 0;
+  color: inherit;
   background: none;
-  border: 0;
+  border: none;
+  border-radius: 0;
 }

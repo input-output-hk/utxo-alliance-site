@@ -1,0 +1,78 @@
+// Chypre Normal
+@font-face {
+  font-family: 'Chypre Normal';
+  src: url('#{$fonts-path}/ChypreNormRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chypre Normal';
+  src: url('#{$fonts-path}/ChypreNormRegularItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Chypre Normal';
+  src: url('#{$fonts-path}/ChypreNormMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chypre Normal';
+  src: url('#{$fonts-path}/ChypreNormDemi.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chypre Normal';
+  src: url('#{$fonts-path}/ChypreNormBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// Tenon
+@font-face {
+  font-family: 'Tenon';
+  src: url('#{$fonts-path}/tenon-x-light-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tenon';
+  src: url('#{$fonts-path}/tenon-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tenon';
+  src: url('#{$fonts-path}/tenon-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tenon';
+  src: url('#{$fonts-path}/tenon-medium-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tenon';
+  src: url('#{$fonts-path}/tenon-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tenon';
+  src: url('#{$fonts-path}/tenon-x-bold-webfont.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}

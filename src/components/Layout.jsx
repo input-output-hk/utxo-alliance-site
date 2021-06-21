@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import '../scss/index.scss'
+import '../scss/styles.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Helmet } from 'react-helmet'
 import { LanguagePicker } from '../components/LanguagePicker'
@@ -59,7 +59,7 @@ export const Layout = ({ children, data }) => {
         </div>
         <Header />
         <div>{children}</div>
-        <Footer/>
+        <Footer />
       </main>
     </Fragment>
   )
