@@ -1,5 +1,23 @@
 {
   "title": "UTXO Alliance",
   "en_display": "EN",
-  "ja_display": "JA"
+  "ja_display": "JA",
+  "faqs.title": "FREQUENTLY asked QUESTIONS",
+  "faqs.items.length": "4",
+  "faqs.items.0": {
+    "title": "What does “UTXO” mean?",
+    "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia similique, veritatis repudiandae illum saepe vel quidem, labore, esse reprehenderit perferendis. Expedita, adipisci natus soluta maxime quos blanditiis a fuga.</p>"
+  },
+  "faqs.items.1": {
+    "title": "Why “alliance?”",
+    "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia similique, veritatis repudiandae illum saepe vel quidem, labore, esse reprehenderit perferendis. Expedita, adipisci natus soluta maxime quos blanditiis a fuga.</p> <p>Enim reprehenderit cum quos, ad libero quidem consequuntur accusamus autem est soluta quis adipisci non, quo perspiciatis, animi sed labore nemo iure cupiditate fugit. Aspernatur perspiciatis dicta quidem accusantium beatae?</p> <p>Amet laboriosam vel eius quo esse deleniti voluptatum hic porro voluptate sapiente quae voluptates nihil fugit modi doloribus quos fugiat reiciendis similique, labore ratione tenetur beatae? Et nostrum nobis quod.</p>"
+  },
+  "faqs.items.2": {
+    "title": "What benefit does membership offer for individuals?",
+    "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia similique, veritatis repudiandae illum saepe vel quidem, labore, esse reprehenderit perferendis. Expedita, adipisci natus soluta maxime quos blanditiis a fuga.</p> <p>Enim reprehenderit cum quos, ad libero quidem consequuntur accusamus autem est soluta quis adipisci non, quo perspiciatis, animi sed labore nemo iure cupiditate fugit. Aspernatur perspiciatis dicta quidem accusantium beatae?</p>"
+  },
+  "faqs.items.3": {
+    "title": "What’s in it for companies and institutions?",
+    "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia similique, veritatis repudiandae illum saepe vel quidem, labore, esse reprehenderit perferendis. Expedita, adipisci natus soluta maxime quos blanditiis a fuga.</p>"
+  }
 }

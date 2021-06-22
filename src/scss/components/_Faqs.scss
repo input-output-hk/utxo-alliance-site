@@ -1,0 +1,17 @@
+.Faqs {
+  padding-top: rem(60);
+  padding-bottom: rem(60);
+
+  &__title {
+    margin: spacer(0, 0, 28);
+    font-family: $font-family-base;
+    font-size: $h3-font-size;
+    font-weight: $font-weight-base;
+    letter-spacing: 0.1em;
+    color: $color-9;
+  }
+
+  .Faq {
+    @include rfs(rem(60), margin-left);
+  }
+}

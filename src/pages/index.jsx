@@ -6,6 +6,7 @@ import { What } from '../components/What'
 import { Why } from '../components/Why'
 import { Who } from '../components/Who'
 import { Members } from '../components/Members'
+import { Faqs } from '../components/Faqs'
 import picturesElementPng from '../assets/images/pictures-element.png'
 
 // markup
@@ -28,28 +29,18 @@ const IndexPage = ({ intl, data }) => {
 
       <Members />
 
-      <div className="container">
-        {/* <h1>Home - {intl.formatMessage({ id: 'title' })}</h1> */}
-
-        <span>6 minutes video</span>
-
-        <h3>Deep dive into the UTXO Alliance</h3>
-
-        <hr />
-
-        <h4>FREQUENTLY asked QUESTIONS</h4>
-
-        <h5>What does “UTXO” mean?</h5>
-        <h5>Why “alliance?”</h5>
-        <h5>What benefit does membership offer for individuals?</h5>
-        <h5>What’s in it for companies and institutions?</h5>
-
-        <hr />
-
-        <h2>Join the alliance</h2>
-      </div>
-
-      <hr />
+      <Faqs
+        title={intl.formatMessage({ id: 'faqs.title' })}
+        items={[
+          ...Array(
+            parseInt(intl.formatMessage({ id: 'faqs.items.length' }))
+          ).keys(),
+        ].map((item) => ({
+          id: `faqs-item-${item}`,
+          title: intl.formatMessage({ id: `faqs.items.${item}.title` }),
+          content: intl.formatMessage({ id: `faqs.items.${item}.content` }),
+        }))}
+      />
     </Layout>
   )
 }

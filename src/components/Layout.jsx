@@ -19,18 +19,27 @@ export const Layout = ({ children, data }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{intl.formatMessage({ id: 'title' })}</title>
-        <meta name="description" content={intl.formatMessage({ id: 'meta_desc' })} />
+        {/* <meta name="description" content={intl.formatMessage({ id: 'meta_desc' })} /> */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={intl.formatMessage({ id: 'title' })} />
-        <meta property="og:description" content={intl.formatMessage({ id: 'meta_desc' })} />
+        <meta
+          property="og:title"
+          content={intl.formatMessage({ id: 'title' })}
+        />
+        {/* <meta property="og:description" content={intl.formatMessage({ id: 'meta_desc' })} /> */}
         <meta property="og:url" content="https://iog.io" />
-        <meta property="og:site_name" content={intl.formatMessage({ id: 'title' })} />
+        <meta
+          property="og:site_name"
+          content={intl.formatMessage({ id: 'title' })}
+        />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={intl.formatMessage({ id: 'title' })} />
-        <meta name="twitter:description" content={intl.formatMessage({ id: 'meta_desc' })} />
+        <meta
+          name="twitter:title"
+          content={intl.formatMessage({ id: 'title' })}
+        />
+        {/* <meta name="twitter:description" content={intl.formatMessage({ id: 'meta_desc' })} /> */}
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@inputoutputHK" />
       </Helmet>
