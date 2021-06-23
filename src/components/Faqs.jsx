@@ -5,6 +5,11 @@ export const Faqs = ({ title, items }) => {
   const [activeItem, setActiveItem] = useState(null)
 
   const handleClick = (id) => {
+    if (activeItem === id) {
+      setActiveItem(null)
+      return
+    }
+
     setActiveItem(id)
   }
 

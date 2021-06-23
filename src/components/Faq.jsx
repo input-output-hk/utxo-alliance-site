@@ -29,7 +29,11 @@ export const Faq = ({
           role="button"
           aria-expanded={open}
           aria-controls={id}
-          onClick={() => onClick(id)}
+          onClick={(event) => {
+            event.preventDefault()
+
+            onClick(id)
+          }}
         >
           {title}
         </a>
