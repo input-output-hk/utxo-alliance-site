@@ -19,5 +19,52 @@
   "faqs.items.3": {
     "title": "What’s in it for companies and institutions?",
     "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officia similique, veritatis repudiandae illum saepe vel quidem, labore, esse reprehenderit perferendis. Expedita, adipisci natus soluta maxime quos blanditiis a fuga.</p>"
+  },
+  "footer.columns.length": "3",
+  "footer.columns.0.title": "Legal",
+  "footer.columns.0.links.length": "2",
+  "footer.columns.0.links.0": {
+    "title": "Copyright",
+    "href": "#",
+    "target": "_self"
+  },
+  "footer.columns.0.links.1": {
+    "title": "Patents",
+    "href": "#",
+    "target": "_self"
+  },
+  "footer.columns.1.title": "Resources",
+  "footer.columns.1.links.length": "3",
+  "footer.columns.1.links.0": {
+    "title": "GitHub",
+    "href": "#",
+    "target": "_self"
+  },
+  "footer.columns.1.links.1": {
+    "title": "Research",
+    "href": "#",
+    "target": "_self"
+  },
+  "footer.columns.1.links.2": {
+    "title": "Calendar",
+    "href": "#",
+    "target": "_self"
+  },
+  "footer.columns.2.title": "Contact",
+  "footer.columns.2.links.length": "3",
+  "footer.columns.2.links.0": {
+    "title": "Forum",
+    "href": "#",
+    "target": "_self"
+  },
+  "footer.columns.2.links.1": {
+    "title": "Assistance",
+    "href": "#",
+    "target": "_self"
+  },
+  "footer.columns.2.links.2": {
+    "title": "Offices",
+    "href": "#",
+    "target": "_self"
   }
 }

@@ -1,3 +1,103 @@
-.footer {
+@use 'sass:math';
 
+.Footer {
+  padding-top: rem(60);
+
+  & > .container {
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    display: block;
+    @include rfs(rem(136), width);
+    min-width: rem(100);
+    height: auto;
+    margin: spacer(0, 0, 40);
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: rem(60);
+
+    @include media-breakpoint-up(sm) {
+      @include rfs(rem(120), margin-bottom);
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-light;
+
+    @include media-breakpoint-up(sm) {
+      align-items: flex-end;
+      @include rfs(rem(120), margin-right);
+      text-align: right;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__column-title {
+    margin: spacer(0, 0, 16);
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    box-shadow: 0 0.5px 0 0 currentColor;
+  }
+
+  &__column-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: spacer(4);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-6;
+      }
+    }
+  }
+
+  &__copyright {
+    padding: spacer(16, 0);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-light;
+    color: $color-6;
+    text-align: center;
+    background-color: $color-3;
+
+    p {
+      margin: 0;
+    }
+
+    @include media-breakpoint-up(sm) {
+      text-align: right;
+    }
+  }
 }

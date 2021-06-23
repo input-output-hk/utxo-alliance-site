@@ -66,9 +66,39 @@ export const Layout = ({ children, data }) => {
             root={'en'}
           />
         </div>
+
         <Header />
+
         <div>{children}</div>
-        <Footer />
+
+        <Footer
+          columns={[
+            ...Array(
+              parseInt(intl.formatMessage({ id: 'footer.columns.length' }))
+            ).keys(),
+          ].map((column) => ({
+            title: intl.formatMessage({ id: `footer.columns.${column}.title` }),
+            links: [
+              ...Array(
+                parseInt(
+                  intl.formatMessage({
+                    id: `footer.columns.${column}.links.length`,
+                  })
+                )
+              ).keys(),
+            ].map((link) => ({
+              title: intl.formatMessage({
+                id: `footer.columns.${column}.links.${link}.title`,
+              }),
+              href: intl.formatMessage({
+                id: `footer.columns.${column}.links.${link}.href`,
+              }),
+              target: intl.formatMessage({
+                id: `footer.columns.${column}.links.${link}.target`,
+              }),
+            })),
+          }))}
+        />
       </main>
     </Fragment>
   )
