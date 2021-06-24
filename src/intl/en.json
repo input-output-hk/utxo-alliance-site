@@ -1,7 +1,27 @@
 {
   "title": "UTXO Alliance",
-  "en_display": "EN",
-  "ja_display": "JA",
+  "header.title": "Uniting the world under a global standard for blockchain",
+  "header.links.length": "4",
+  "header.links.0": {
+    "title": "Join",
+    "href": "#",
+    "target": "_self"
+  },
+  "header.links.1": {
+    "title": "Purpose",
+    "href": "#",
+    "target": "_self"
+  },
+  "header.links.2": {
+    "title": "Members",
+    "href": "#",
+    "target": "_self"
+  },
+  "header.links.3": {
+    "title": "Join 2",
+    "href": "#",
+    "target": "_self"
+  },
   "faqs.title": "FREQUENTLY asked QUESTIONS",
   "faqs.items.length": "4",
   "faqs.items.0": {

@@ -15,7 +15,7 @@
       display: block;
       @include rfs(rem(580), width);
       max-width: 42.5%;
-      transform: translateY(-50%);
+      transform: translateY(-35%);
       z-index: 20;
     }
   }
@@ -23,7 +23,19 @@
   @include media-breakpoint-up(lg) {
     &__image {
       right: 50%;
-      transform: translate(100%, -50%);
+      transform: translate(100%, -35%);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__image {
+      transform: translate(100%, -32.5%);
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &__image {
+      transform: translate(100%, -30%);
     }
   }
 }

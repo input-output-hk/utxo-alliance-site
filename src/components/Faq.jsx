@@ -1,7 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { useRef } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
+import _debounce from 'lodash/debounce'
 
 export const Faq = ({
   id,
@@ -13,6 +11,14 @@ export const Faq = ({
   const contentEl = useRef(null)
   const [height, setHeight] = useState(0)
 
+  const updateHeightOnResize = useCallback(() => {
+    console.log('updateHeightOnResize', open, contentEl.current.offsetHeight)
+
+    if (!open || !contentEl.current) return
+
+    setHeight(contentEl.current.offsetHeight)
+  }, [open])
+
   useEffect(() => {
     if (open && contentEl.current) {
       setHeight(contentEl.current.offsetHeight)
@@ -20,6 +26,13 @@ export const Faq = ({
       setHeight(0)
     }
   }, [open])
+
+  useEffect(() => {
+    window.addEventListener('resize', _debounce(updateHeightOnResize, 100))
+
+    return () =>
+      window.removeEventListener('resize', _debounce(updateHeightOnResize, 100))
+  }, [updateHeightOnResize])
 
   return (
     <article className="Faq">

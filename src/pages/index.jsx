@@ -13,8 +13,6 @@ import picturesElementPng from '../assets/images/pictures-element.png'
 const IndexPage = ({ intl, data }) => {
   return (
     <Layout data={data}>
-      <hr />
-
       <div className="pictures-element">
         <img
           className="pictures-element__image"

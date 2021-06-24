@@ -45,7 +45,7 @@ export const Layout = ({ children, data }) => {
       </Helmet>
 
       <main>
-        <div className="container">
+        {/* <div className="container">
           <LanguagePicker
             languages={[
               {
@@ -65,11 +65,22 @@ export const Layout = ({ children, data }) => {
             }}
             root={'en'}
           />
-        </div>
+        </div> */}
 
-        <Header />
+        <Header
+          title={intl.formatMessage({ id: `header.title` })}
+          links={[
+            ...Array(
+              parseInt(intl.formatMessage({ id: `header.links.length` }))
+            ).keys(),
+          ].map((link) => ({
+            title: intl.formatMessage({ id: `header.links.${link}.title` }),
+            href: intl.formatMessage({ id: `header.links.${link}.href` }),
+            target: intl.formatMessage({ id: `header.links.${link}.target` }),
+          }))}
+        />
 
-        <div>{children}</div>
+        {children}
 
         <Footer
           columns={[
