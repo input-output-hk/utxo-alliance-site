@@ -59,11 +59,12 @@
 @import 'partials/misc';
 
 // Components
+@import 'components/Button';
+@import 'components/TextField';
 @import 'components/Header';
-@import 'components/What';
-@import 'components/Who';
-@import 'components/Why';
+@import 'components/About';
 @import 'components/Members';
 @import 'components/Faq';
 @import 'components/Faqs';
+@import 'components/Form';
 @import 'components/Footer';

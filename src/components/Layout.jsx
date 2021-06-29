@@ -2,12 +2,8 @@ import React, { Fragment } from 'react'
 import '../scss/styles.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Helmet } from 'react-helmet'
-import { LanguagePicker } from '../components/LanguagePicker'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
-
-import Us from '../components/flags/Us.svg'
-import Jp from '../components/flags/Jp.svg'
 
 export const Layout = ({ children, data }) => {
   const intl = useIntl()
@@ -44,7 +40,7 @@ export const Layout = ({ children, data }) => {
         <meta name="twitter:site" content="@inputoutputHK" />
       </Helmet>
 
-      <main>
+      <main className="main-wrapper">
         {/* <div className="container">
           <LanguagePicker
             languages={[

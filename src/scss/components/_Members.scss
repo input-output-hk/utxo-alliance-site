@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: (rem(400) + ($container-padding-x * 2));
+    max-width: (rem(400) + rem(120));
     margin: 0 auto;
     padding-left: $container-padding-x;
     padding-right: $container-padding-x;
@@ -65,7 +65,9 @@
   }
 
   &-text {
-    margin-bottom: 0;
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @include media-breakpoint-up(lg) {

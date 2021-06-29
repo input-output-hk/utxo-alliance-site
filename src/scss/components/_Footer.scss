@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: $font-size-sm;
+    @include font-size($font-size-sm);
     font-weight: $font-weight-light;
 
     @include media-breakpoint-up(sm) {
@@ -86,7 +86,7 @@
 
   &__copyright {
     padding: spacer(16, 0);
-    font-size: $font-size-sm;
+    @include font-size($font-size-sm);
     font-weight: $font-weight-light;
     color: $color-6;
     text-align: center;

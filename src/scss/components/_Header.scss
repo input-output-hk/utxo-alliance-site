@@ -123,7 +123,7 @@
     margin: 0;
     padding-left: 10%;
     padding-right: 10%;
-    font-size: $font-size-sm;
+    @include font-size($font-size-sm);
     font-weight: $font-weight-bold;
 
     li {
@@ -150,7 +150,7 @@
     &-links {
       padding-left: 12.5%;
       padding-right: 12.5%;
-      font-size: rem(14);
+      @include font-size(rem(14));
     }
   }
 
@@ -164,7 +164,7 @@
     }
 
     &-links {
-      font-size: $font-size-base;
+      @include font-size($font-size-base);
     }
   }
 

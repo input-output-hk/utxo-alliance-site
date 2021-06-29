@@ -1,0 +1,25 @@
+.Button {
+  display: inline-block;
+  margin: 0;
+  padding: spacer(12, 40);
+  font-family: $headings-font-family;
+  @include font-size($h3-font-size);
+  font-weight: 500;
+  line-height: 1;
+  color: $color-10;
+  border: 2px solid $color-9;
+  border-radius: rem(4);
+  transition: $transition-base;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $color-9;
+  }
+
+  &[disabled],
+  &[aria-disabled='true'] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

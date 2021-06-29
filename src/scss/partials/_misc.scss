@@ -1,41 +1,29 @@
 @use 'sass:math';
 
 .pictures-element {
+  .About {
+    &:first-child {
+      margin-top: -10%;
+      padding-top: 20%;
+    }
+  }
+
   &__image {
     display: none;
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     position: relative;
 
     &__image {
       position: absolute;
       top: 50%;
-      right: $container-padding-x;
+      right: 50%;
       display: block;
       @include rfs(rem(580), width);
       max-width: 42.5%;
-      transform: translateY(-35%);
+      transform: translate(105%, -35%);
       z-index: 20;
-    }
-  }
-
-  @include media-breakpoint-up(lg) {
-    &__image {
-      right: 50%;
-      transform: translate(100%, -35%);
-    }
-  }
-
-  @include media-breakpoint-up(xl) {
-    &__image {
-      transform: translate(100%, -32.5%);
-    }
-  }
-
-  @media (min-width: 1600px) {
-    &__image {
-      transform: translate(100%, -30%);
     }
   }
 }

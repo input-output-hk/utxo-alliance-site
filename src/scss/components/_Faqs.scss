@@ -5,7 +5,7 @@
   &__title {
     margin: spacer(0, 0, 28);
     font-family: $font-family-base;
-    font-size: $h3-font-size;
+    @include font-size($h3-font-size);
     font-weight: $font-weight-base;
     letter-spacing: 0.1em;
     color: $color-9;
