@@ -25,6 +25,29 @@
     z-index: 10;
   }
 
+  &__play-button {
+    position: absolute;
+    bottom: 20vw;
+    left: 50%;
+    width: 15vw;
+    max-width: rem(160);
+    transform: translate(-50%, 0);
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: $transition-base;
+      pointer-events: none;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.05);
+      }
+    }
+  }
+
   @include media-breakpoint-up(sm) {
     &__shape {
       margin-top: -2.5vw;
@@ -40,6 +63,10 @@
     &__title {
       bottom: 1vw;
       font-size: 3.5vw;
+    }
+
+    &__play-button {
+      width: 12.5vw;
     }
   }
 
@@ -59,6 +86,11 @@
       width: 40vw;
       font-size: 3vw;
     }
+
+    &__play-button {
+      bottom: 17.5vw;
+      width: 10vw;
+    }
   }
 
   @include media-breakpoint-up(xxl) {
@@ -71,6 +103,10 @@
       bottom: 1.125vw;
       width: 30vw;
       font-size: 2.5vw;
+    }
+
+    &__play-button {
+      bottom: 15vw;
     }
   }
 
@@ -86,7 +122,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  margin-bottom: spacer(40);
   padding-top: spacer(60);
   padding-bottom: spacer(8);
   z-index: 10;
