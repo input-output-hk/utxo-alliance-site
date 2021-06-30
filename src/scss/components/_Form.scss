@@ -23,6 +23,7 @@
   }
 
   &__content {
+    max-width: 32em;
     margin-bottom: rem(60);
     @include rfs(rem(60), margin-left);
     @include font-size($h3-font-size);
