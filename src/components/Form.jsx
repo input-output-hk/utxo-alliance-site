@@ -38,7 +38,7 @@ const validateField = ({ input, name, value }) => {
   }
 }
 
-export const Form = ({ id, title }) => {
+export const Form = ({ id, title, content, labels }) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (event) => {
@@ -98,13 +98,18 @@ export const Form = ({ id, title }) => {
       <div className="container">
         <h2 className="Form__title h1">{title}</h2>
 
+        <div
+          className="Form__content"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-6">
               <TextField
                 id={`${id}-name`}
                 name="name"
-                label="Your Name"
+                label={labels.name}
                 onBlur={handleChange}
                 onChange={handleChange}
               />
@@ -114,7 +119,7 @@ export const Form = ({ id, title }) => {
               <TextField
                 id={`${id}-company`}
                 name="company"
-                label="Your Company"
+                label={labels.company}
                 onBlur={handleChange}
                 onChange={handleChange}
               />
@@ -125,7 +130,7 @@ export const Form = ({ id, title }) => {
                 id={`${id}-email`}
                 name="email"
                 type="email"
-                label="Your Email"
+                label={labels.email}
                 onBlur={handleChange}
                 onChange={handleChange}
               />
@@ -135,7 +140,7 @@ export const Form = ({ id, title }) => {
               <TextField
                 id={`${id}-role`}
                 name="role"
-                label="Your Role"
+                label={labels.role}
                 onBlur={handleChange}
                 onChange={handleChange}
               />
@@ -145,7 +150,7 @@ export const Form = ({ id, title }) => {
               <TextField
                 id={`${id}-textbox1`}
                 name="textbox1"
-                label="Why do you want to join the UTXO Alliance?"
+                label={labels.textbox1}
                 multiline
                 onBlur={handleChange}
                 onChange={handleChange}
@@ -156,7 +161,7 @@ export const Form = ({ id, title }) => {
               <TextField
                 id={`${id}-textbox2`}
                 name="textbox2"
-                label="How or what would you contribute to the UTXO Alliance?"
+                label={labels.textbox2}
                 multiline
                 onBlur={handleChange}
                 onChange={handleChange}

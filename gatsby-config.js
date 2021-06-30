@@ -1,9 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'IOG Site',
-    description: 'IOG Site Description',
-    author: 'IOHK',
-    siteUrl: 'https://iog.io',
+    title: 'UTXO Alliance',
+    siteUrl: 'https://utxo-alliance.org',
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -12,7 +10,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingIds: ['G-Y0RTBBRRH4'],
+        trackingIds: [],
       },
     },
     'gatsby-plugin-sitemap',
@@ -38,7 +36,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/assets/images/favicon.svg',
+        icon: './src/assets/images/favicon.svg',
       },
     },
     {

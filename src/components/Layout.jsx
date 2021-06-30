@@ -2,67 +2,42 @@ import React, { Fragment } from 'react'
 import '../scss/styles.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Helmet } from 'react-helmet'
-import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 
 export const Layout = ({ children, data }) => {
   const intl = useIntl()
 
-  const ogImage = data.site.siteMetadata.siteUrl + '/iog-fb-og2.jpg'
+  const title = intl.formatMessage({ id: 'title' })
+  const metaDescription = intl.formatMessage({ id: 'meta.description' })
+  const ogImage = `${data.site.siteMetadata.siteUrl}/og-image.jpg`
 
   return (
     <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{intl.formatMessage({ id: 'title' })}</title>
-        {/* <meta name="description" content={intl.formatMessage({ id: 'meta_desc' })} /> */}
+        <title>{title}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}/`} />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={metaDescription} />
         <meta
-          property="og:title"
-          content={intl.formatMessage({ id: 'title' })}
+          property="og:url"
+          content={`${data.site.siteMetadata.siteUrl}/`}
         />
-        {/* <meta property="og:description" content={intl.formatMessage({ id: 'meta_desc' })} /> */}
-        <meta property="og:url" content="https://iog.io" />
-        <meta
-          property="og:site_name"
-          content={intl.formatMessage({ id: 'title' })}
-        />
+        <meta property="og:site_name" content={title} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary" />
-        <meta
-          name="twitter:title"
-          content={intl.formatMessage({ id: 'title' })}
-        />
-        {/* <meta name="twitter:description" content={intl.formatMessage({ id: 'meta_desc' })} /> */}
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:site" content="@inputoutputHK" />
+        {/* <meta name="twitter:site" content="" /> */}
       </Helmet>
 
       <main className="main-wrapper">
-        {/* <div className="container">
-          <LanguagePicker
-            languages={[
-              {
-                code: 'en',
-                name: intl.formatMessage({ id: `en_display` }),
-                flag: <Us style={{ width: 20, height: 14 }} />,
-              },
-              {
-                code: 'ja',
-                name: intl.formatMessage({ id: `ja_display` }),
-                flag: <Jp style={{ width: 20, height: 14 }} />,
-              },
-            ]}
-            current={{
-              code: intl.locale,
-              name: intl.formatMessage({ id: `${intl.locale}_display` }),
-            }}
-            root={'en'}
-          />
-        </div> */}
-
         <Header
           title={intl.formatMessage({ id: `header.title` })}
           links={[

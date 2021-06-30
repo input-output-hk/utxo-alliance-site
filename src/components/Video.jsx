@@ -1,13 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import separatorImage from '../assets/images/separator-1.svg'
 
-export const Video = ({
-  preTitle,
-  title,
-  videoProvider,
-  videoEmbedId,
-  videoPoster,
-}) => {
+export const Video = ({ preTitle, title, provider, embedId, poster }) => {
   const playerEl = useRef(null)
 
   useEffect(() => {
@@ -54,10 +48,10 @@ export const Video = ({
       },
     })
 
-    player.poster = videoPoster
+    player.poster = poster
 
     player.on('ready', () => {
-      player.poster = videoPoster
+      player.poster = poster
     })
 
     return () => {
@@ -65,7 +59,7 @@ export const Video = ({
         player.destroy()
       }
     }
-  }, [videoPoster])
+  }, [poster])
 
   return (
     <section className="Video">
@@ -110,16 +104,12 @@ export const Video = ({
             aria-hidden="true"
             loading="lazy"
           >
-            <img
-              className="Video__player-background"
-              src={videoPoster}
-              alt=""
-            />
+            <img className="Video__player-background" src={poster} alt="" />
 
             <div
               className="player"
-              data-plyr-provider={videoProvider}
-              data-plyr-embed-id={videoEmbedId}
+              data-plyr-provider={provider}
+              data-plyr-embed-id={embedId}
             ></div>
           </div>
         </div>

@@ -46,11 +46,11 @@ const IndexPage = ({ intl, data }) => {
       />
 
       <Video
-        preTitle="6 minutes video"
-        title="Deep dive into the UTXO Alliance"
-        videoProvider="vimeo"
-        videoEmbedId="563568179"
-        videoPoster={videoPosterJpg}
+        preTitle={intl.formatMessage({ id: 'video.preTitle' })}
+        title={intl.formatMessage({ id: 'video.title' })}
+        provider={intl.formatMessage({ id: 'video.provider' })}
+        embedId={intl.formatMessage({ id: 'video.embedId' })}
+        poster={videoPosterJpg}
       />
 
       <Faqs
@@ -69,6 +69,15 @@ const IndexPage = ({ intl, data }) => {
       <Form
         id="join-the-alliance"
         title={intl.formatMessage({ id: 'join.title' })}
+        content={intl.formatMessage({ id: 'join.content' })}
+        labels={{
+          name: intl.formatMessage({ id: 'join.labels.name' }),
+          company: intl.formatMessage({ id: 'join.labels.company' }),
+          email: intl.formatMessage({ id: 'join.labels.email' }),
+          role: intl.formatMessage({ id: 'join.labels.role' }),
+          textbox1: intl.formatMessage({ id: 'join.labels.textbox1' }),
+          textbox2: intl.formatMessage({ id: 'join.labels.textbox2' }),
+        }}
       />
     </Layout>
   )

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="444px" height="255px" viewBox="0 0 444 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>chevron-down</title>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="chevron-down" transform="translate(0.575000, 0.975000)" fill="#000000" fill-rule="nonzero">
-            <path d="M439.325,23.325 L419.525,3.525 C414.825,-1.175 407.225,-1.175 402.525,3.525 L221.425,184.225 L40.325,3.525 C35.625,-1.175 28.025,-1.175 23.325,3.525 L3.525,23.325 C-1.175,28.025 -1.175,35.625 3.525,40.325 L212.925,249.725 C217.625,254.425 225.225,254.425 229.925,249.725 L439.325,40.325 C444.025,35.625 444.025,28.025 439.325,23.325 Z" id="Path"></path>
-        </g>
-    </g>
-</svg>
