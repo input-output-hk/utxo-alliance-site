@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import _debounce from 'lodash/debounce'
+import React, { useEffect, useRef, useState } from 'react'
 
 export const Faq = ({
   id,
@@ -9,30 +8,15 @@ export const Faq = ({
   onClick = () => {},
 }) => {
   const contentEl = useRef(null)
-  const [height, setHeight] = useState(0)
-
-  const updateHeightOnResize = useCallback(() => {
-    console.log('updateHeightOnResize', open, contentEl.current.offsetHeight)
-
-    if (!open || !contentEl.current) return
-
-    setHeight(contentEl.current.offsetHeight)
-  }, [open])
+  const [height, setHeight] = useState(null)
 
   useEffect(() => {
-    if (open && contentEl.current) {
-      setHeight(contentEl.current.offsetHeight)
+    if (open) {
+      setHeight(contentEl.current?.offsetHeight)
     } else {
-      setHeight(0)
+      setHeight(null)
     }
   }, [open])
-
-  useEffect(() => {
-    window.addEventListener('resize', _debounce(updateHeightOnResize, 100))
-
-    return () =>
-      window.removeEventListener('resize', _debounce(updateHeightOnResize, 100))
-  }, [updateHeightOnResize])
 
   return (
     <article className="Faq">
@@ -57,6 +41,7 @@ export const Faq = ({
         className="Faq__content-wrapper"
         style={{ height }}
         aria-hidden={!open}
+        tabIndex={open ? undefined : -1}
       >
         <div
           ref={contentEl}

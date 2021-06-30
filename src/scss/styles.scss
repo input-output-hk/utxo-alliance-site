@@ -52,6 +52,9 @@
 // Utilities
 // @import 'bootstrap/scss/utilities/api';
 
+// Vendor
+@import 'vendor/plyr';
+
 // Partials
 @import 'partials/fonts';
 @import 'partials/scaffolding';
@@ -64,6 +67,7 @@
 @import 'components/Header';
 @import 'components/About';
 @import 'components/Members';
+@import 'components/Video';
 @import 'components/Faq';
 @import 'components/Faqs';
 @import 'components/Form';

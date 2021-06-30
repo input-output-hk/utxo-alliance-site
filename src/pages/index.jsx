@@ -4,9 +4,11 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import { graphql } from 'gatsby'
 import { About } from '../components/About'
 import { Members } from '../components/Members'
+import { Video } from '../components/Video'
 import { Faqs } from '../components/Faqs'
 import { Form } from '../components/Form'
 import picturesElementPng from '../assets/images/pictures-element.png'
+import videoPosterJpg from '../assets/images/video-poster.jpg'
 
 // markup
 const IndexPage = ({ intl, data }) => {
@@ -41,6 +43,14 @@ const IndexPage = ({ intl, data }) => {
       <Members
         title={intl.formatMessage({ id: 'members.title' })}
         content={intl.formatMessage({ id: 'members.content' })}
+      />
+
+      <Video
+        preTitle="6 minutes video"
+        title="Deep dive into the UTXO Alliance"
+        videoProvider="vimeo"
+        videoEmbedId="563568179"
+        videoPoster={videoPosterJpg}
       />
 
       <Faqs
