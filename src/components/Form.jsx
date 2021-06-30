@@ -103,7 +103,7 @@ export const Form = ({ id, title, content, labels }) => {
           dangerouslySetInnerHTML={{ __html: content }}
         />
 
-        <form onSubmit={handleSubmit}>
+        <form className="Form__form" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-6">
               <TextField

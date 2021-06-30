@@ -18,21 +18,38 @@
   }
 
   &__title {
-    margin: spacer(0, 0, 40);
+    margin: spacer(0, 0, 28);
     color: $color-3;
   }
 
-  .TextField {
-    margin-bottom: spacer(40);
+  &__content {
+    margin-bottom: rem(60);
+    @include rfs(rem(60), margin-left);
+    @include font-size($h3-font-size);
+    font-weight: $font-weight-light;
+    letter-spacing: 0.025em;
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  .row {
-    @include rfs(rem(30), margin-left);
-    @include rfs(rem(30), margin-right);
+  &__form {
+    @include rfs(rem(60), margin-left);
+    @include rfs(rem(60), margin-right);
 
-    & > [class*='col'] {
-      @include rfs(rem(30), padding-left);
-      @include rfs(rem(30), padding-right);
+    .row {
+      @include rfs(rem(-30), margin-left);
+      @include rfs(rem(-30), margin-right);
+
+      & > [class*='col'] {
+        @include rfs(rem(30), padding-left);
+        @include rfs(rem(30), padding-right);
+      }
+    }
+
+    .TextField {
+      margin-bottom: spacer(40);
     }
   }
 }
