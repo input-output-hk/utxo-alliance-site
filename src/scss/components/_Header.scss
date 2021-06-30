@@ -13,9 +13,9 @@
 
   &__title {
     position: absolute;
-    bottom: 2.25vw;
+    bottom: 2vw;
     left: 50%;
-    width: 60vw;
+    width: 50vw;
     margin: 0;
     font-weight: $font-weight-bold;
     font-size: 3.75vw;
@@ -38,7 +38,7 @@
     }
 
     &__title {
-      bottom: 1.25vw;
+      bottom: 1vw;
       font-size: 3.5vw;
     }
   }
@@ -56,7 +56,7 @@
     }
 
     &__title {
-      width: 50vw;
+      width: 40vw;
       font-size: 3vw;
     }
   }
@@ -68,7 +68,8 @@
     }
 
     &__title {
-      width: 40vw;
+      bottom: 1.125vw;
+      width: 30vw;
       font-size: 2.5vw;
     }
   }
