@@ -5,8 +5,11 @@ import headerShapes765wPng from '../assets/images/header-shapes-765w.png'
 import headerShapes1530wPng from '../assets/images/header-shapes-1530w.png'
 import headerShapes2295wPng from '../assets/images/header-shapes-2295w.png'
 import headerShapes3060wPng from '../assets/images/header-shapes-3060w.png'
+import { useVideoModal } from './VideoModal'
 
 export const Header = ({ title, links }) => {
+  const setVideoModal = useVideoModal()
+
   return (
     <header className="Header">
       <img
@@ -53,7 +56,13 @@ export const Header = ({ title, links }) => {
       <div className="container">
         <h1 className="Header__title">{title}</h1>
 
-        <button className="Header__play-button" onClick={() => {}}>
+        <button
+          className="Header__play-button"
+          aria-label="Play Video"
+          onClick={() =>
+            setVideoModal({ provider: 'youtube', embedId: 'dQw4w9WgXcQ' })
+          }
+        >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.14 102.15">
             <circle
               cx="51.07"

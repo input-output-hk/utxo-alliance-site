@@ -2,8 +2,9 @@ import React, { Fragment } from 'react'
 import '../scss/styles.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Helmet } from 'react-helmet'
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
+import { Header } from './Header'
+import { Footer } from './Footer'
+import { VideoModalProvider } from './VideoModal'
 
 export const Layout = ({ children, data }) => {
   const intl = useIntl()
@@ -38,49 +39,53 @@ export const Layout = ({ children, data }) => {
       </Helmet>
 
       <main className="main-wrapper">
-        <Header
-          title={intl.formatMessage({ id: `header.title` })}
-          links={[
-            ...Array(
-              parseInt(intl.formatMessage({ id: `header.links.length` }))
-            ).keys(),
-          ].map((link) => ({
-            title: intl.formatMessage({ id: `header.links.${link}.title` }),
-            href: intl.formatMessage({ id: `header.links.${link}.href` }),
-            target: intl.formatMessage({ id: `header.links.${link}.target` }),
-          }))}
-        />
-
-        {children}
-
-        <Footer
-          columns={[
-            ...Array(
-              parseInt(intl.formatMessage({ id: 'footer.columns.length' }))
-            ).keys(),
-          ].map((column) => ({
-            title: intl.formatMessage({ id: `footer.columns.${column}.title` }),
-            links: [
+        <VideoModalProvider>
+          <Header
+            title={intl.formatMessage({ id: `header.title` })}
+            links={[
               ...Array(
-                parseInt(
-                  intl.formatMessage({
-                    id: `footer.columns.${column}.links.length`,
-                  })
-                )
+                parseInt(intl.formatMessage({ id: `header.links.length` }))
               ).keys(),
             ].map((link) => ({
+              title: intl.formatMessage({ id: `header.links.${link}.title` }),
+              href: intl.formatMessage({ id: `header.links.${link}.href` }),
+              target: intl.formatMessage({ id: `header.links.${link}.target` }),
+            }))}
+          />
+
+          {children}
+
+          <Footer
+            columns={[
+              ...Array(
+                parseInt(intl.formatMessage({ id: 'footer.columns.length' }))
+              ).keys(),
+            ].map((column) => ({
               title: intl.formatMessage({
-                id: `footer.columns.${column}.links.${link}.title`,
+                id: `footer.columns.${column}.title`,
               }),
-              href: intl.formatMessage({
-                id: `footer.columns.${column}.links.${link}.href`,
-              }),
-              target: intl.formatMessage({
-                id: `footer.columns.${column}.links.${link}.target`,
-              }),
-            })),
-          }))}
-        />
+              links: [
+                ...Array(
+                  parseInt(
+                    intl.formatMessage({
+                      id: `footer.columns.${column}.links.length`,
+                    })
+                  )
+                ).keys(),
+              ].map((link) => ({
+                title: intl.formatMessage({
+                  id: `footer.columns.${column}.links.${link}.title`,
+                }),
+                href: intl.formatMessage({
+                  id: `footer.columns.${column}.links.${link}.href`,
+                }),
+                target: intl.formatMessage({
+                  id: `footer.columns.${column}.links.${link}.target`,
+                }),
+              })),
+            }))}
+          />
+        </VideoModalProvider>
       </main>
     </Fragment>
   )

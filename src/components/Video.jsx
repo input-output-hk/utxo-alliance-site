@@ -1,66 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import separatorImage from '../assets/images/separator-1.svg'
+import { VideoPlayer } from './VideoPlayer'
 
 export const Video = ({ preTitle, title, provider, embedId, poster }) => {
-  const playerEl = useRef(null)
-
-  useEffect(() => {
-    let player
-
-    if (
-      typeof window === 'undefined' ||
-      typeof document === 'undefined' ||
-      !playerEl.current
-    ) {
-      return
-    }
-
-    const Plyr = require('plyr')
-
-    const plyrEl = playerEl.current.querySelector('.player')
-
-    if (!plyrEl) {
-      return
-    }
-
-    player = new Plyr(plyrEl, {
-      controls: [
-        'play-large',
-        'play',
-        'progress',
-        'mute',
-        'volume',
-        'fullscreen',
-      ],
-      youtube: {
-        noCookie: true,
-        rel: 0,
-        showinfo: 0,
-        iv_load_policy: 3,
-        modestbranding: 1,
-      },
-      vimeo: {
-        byline: false,
-        portrait: false,
-        title: false,
-        speed: false,
-        transparent: false,
-      },
-    })
-
-    player.poster = poster
-
-    player.on('ready', () => {
-      player.poster = poster
-    })
-
-    return () => {
-      if (player) {
-        player.destroy()
-      }
-    }
-  }, [poster])
-
   return (
     <section className="Video">
       <div className="Video__container">
@@ -98,7 +40,7 @@ export const Video = ({ preTitle, title, provider, embedId, poster }) => {
         </div>
 
         <div className="Video__col-2">
-          <div ref={playerEl} className="Video__player">
+          <div className="Video__player">
             <img
               className="Video__player-background"
               src={poster}
@@ -107,11 +49,11 @@ export const Video = ({ preTitle, title, provider, embedId, poster }) => {
               loading="lazy"
             />
 
-            <div
-              className="player"
-              data-plyr-provider={provider}
-              data-plyr-embed-id={embedId}
-            ></div>
+            <VideoPlayer
+              provider={provider}
+              embedId={embedId}
+              poster={poster}
+            />
           </div>
         </div>
       </div>

@@ -1,1 +1,63 @@
 @import 'plyr/src/sass/plyr';
+
+.plyr {
+  --plyr-color-main: #{$color-7};
+
+  .plyr__poster {
+    transform: scale(1.05);
+  }
+
+  .plyr__control--overlaid {
+    width: 20%;
+    max-width: rem(160);
+    padding: 0;
+    background: none !important;
+    opacity: 1;
+    transform: translate(-50%, -75%);
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url('#{$images-path}/play-button.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: $transition-base;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::after {
+        transform: scale(1.05);
+      }
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .plyr__control--overlaid {
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.plyr--playing {
+  .plyr__control--overlaid {
+    opacity: 0;
+  }
+}
