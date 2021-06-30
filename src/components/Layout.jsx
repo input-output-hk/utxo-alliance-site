@@ -14,7 +14,7 @@ export const Layout = ({ children, data }) => {
 
   return (
     <Fragment>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: intl.locale }}>
         <meta charSet="utf-8" />
         <title>{title}</title>
         <meta name="description" content={metaDescription} />

@@ -98,13 +98,14 @@ export const Video = ({ preTitle, title, provider, embedId, poster }) => {
         </div>
 
         <div className="Video__col-2">
-          <div
-            ref={playerEl}
-            className="Video__player"
-            aria-hidden="true"
-            loading="lazy"
-          >
-            <img className="Video__player-background" src={poster} alt="" />
+          <div ref={playerEl} className="Video__player">
+            <img
+              className="Video__player-background"
+              src={poster}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
 
             <div
               className="player"

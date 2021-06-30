@@ -36,13 +36,7 @@ export const Faq = ({
         </a>
       </h3>
 
-      <div
-        id={id}
-        className="Faq__content-wrapper"
-        style={{ height }}
-        aria-hidden={!open}
-        tabIndex={open ? undefined : -1}
-      >
+      <div id={id} className="Faq__content-wrapper" style={{ height }}>
         <div
           ref={contentEl}
           className="Faq__content"
