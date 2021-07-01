@@ -9,6 +9,7 @@
   height: 100%;
   background-color: $color-1;
   z-index: 1000;
+  will-change: opacity;
 
   &__backdrop {
     position: absolute;
@@ -21,28 +22,29 @@
 
   &__close {
     position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include rfs(rem(30), top);
-    @include rfs(rem(30), right);
     @include rfs(rem(60), width);
     @include rfs(rem(60), height);
     color: $color-1;
     background-color: $color-7;
-    border-top-left-radius: 25%;
-    border-bottom-right-radius: 25%;
-    transition: $transition-base;
+    border-bottom-left-radius: 25%;
     z-index: 10;
-
-    &:hover {
-      transform: rotate(90deg);
-    }
 
     svg {
       display: block;
       width: 50%;
       height: auto;
+      transition: $transition-base;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(0.9);
+      }
     }
   }
 

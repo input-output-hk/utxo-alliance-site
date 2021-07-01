@@ -1,5 +1,9 @@
 @use 'sass:math';
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .pictures-element {
   .About {
     &:first-child {

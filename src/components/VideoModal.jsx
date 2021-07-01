@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 import { VideoPlayer } from './VideoPlayer'
+import { CSSTransition } from 'react-transition-group'
 
 const VideoModalContext = createContext()
 
@@ -42,11 +43,37 @@ const VideoModal = ({ provider, embedId, poster }) => {
 export const VideoModalProvider = ({ children }) => {
   const [video, setVideo] = useState(null)
 
+  const disableMainScrollbar = () => {
+    console.log('disableMainScrollbar')
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth
+
+    if (scrollbarWidth > 0) {
+      document.body.classList.add('overflow-hidden')
+      document.body.style.paddingRight = `${scrollbarWidth}px`
+    }
+  }
+
+  const enableMainScrollbar = () => {
+    document.body.classList.remove('overflow-hidden')
+    document.body.style.paddingRight = ''
+  }
+
   return (
     <VideoModalContext.Provider value={setVideo}>
       {children}
 
-      {video?.provider && video?.embedId && <VideoModal {...video} />}
+      <CSSTransition
+        in={!!(video?.provider && video?.embedId)}
+        timeout={500}
+        classNames="transition-video-modal"
+        onEnter={disableMainScrollbar}
+        onExited={enableMainScrollbar}
+        mountOnEnter
+        unmountOnExit
+      >
+        <VideoModal {...video} />
+      </CSSTransition>
     </VideoModalContext.Provider>
   )
 }
