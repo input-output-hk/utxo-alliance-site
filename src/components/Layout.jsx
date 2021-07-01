@@ -11,7 +11,7 @@ export const Layout = ({ children, data }) => {
 
   const title = intl.formatMessage({ id: 'title' })
   const metaDescription = intl.formatMessage({ id: 'meta.description' })
-  const ogImage = `${data.site.siteMetadata.siteUrl}/og-image.jpg`
+  const ogImage = `${data.site.siteMetadata.siteUrl}/og-image.png`
 
   return (
     <Fragment>
