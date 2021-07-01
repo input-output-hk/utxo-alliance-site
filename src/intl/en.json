@@ -29,13 +29,31 @@
   "what.content": "<p>The UTXO Alliance was created to ensure anyone can safely share digital assets, such as coins, tokens, data, and smart contracts, using blockchain technology. To do this, we need to grow participation, expand use cases, and both educate and inspire mainstream users.</p> <p>By encouraging those at the forefront of the technology to engage in shared efforts and initiatives, we aim to encourage proactive collaboration across research, expertise, and innovation in the blockchain space.</p>",
   "why.title": "Why it matters",
   "why.content": "<p>Many people are waking up to what cryptocurrencies can offer – how they can create monetary value. We now need them to witness other blockchain strengths.</p> <p>At the UTXO Alliance, we believe that making it easier to transact across different blockchains will encourage broader use of the technology. To do this, we need to advocate interoperability across systems with similar outlooks – in this case, the UTXO model.</p> <p>Ultimately, the importance of this initiative concerns the use of data. It all comes down to inputs and outputs – the amount of data used, the speed with which data is processed, transaction costs, and energy usage.</p>",
+  "testimonials.title": "Testimonials",
+  "testimonials.quotes.length": "4",
+  "testimonials.quotes.0": {
+    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
+    "footer": "Salvador Dali, Surrealist, Draftsman"
+  },
+  "testimonials.quotes.1": {
+    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
+    "footer": "Salvador Dali, Surrealist, Draftsman"
+  },
+  "testimonials.quotes.2": {
+    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
+    "footer": "Salvador Dali, Surrealist, Draftsman"
+  },
+  "testimonials.quotes.3": {
+    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
+    "footer": "Salvador Dali, Surrealist, Draftsman"
+  },
   "members.title": "Who should join?",
   "members.content": "<p>Our UTXO Alliance members include some of the best and brightest blockchain minds out there. We’re looking for professionals and organisations that are developing the UTXO-based blockchain tools and techniques needed to evolve the standard; partners to take part in education, technical assistance, and information sessions.</p> <p>Anyone that’s committed to furthering this transformative technology with the drive, knowledge, and passion to do so is welcome to join.</p>",
   "video.preTitle": "6 minutes video",
   "video.title": "Deep dive into the UTXO Alliance",
   "video.provider": "vimeo",
   "video.embedId": "563568179",
-  "faqs.title": "Frequently asked questions",
+  "faqs.title": "FREQUENTLY asked QUESTIONS",
   "faqs.items.length": "5",
   "faqs.items.0": {
     "title": "What is a UTXO?",
@@ -57,14 +75,14 @@
     "title": "Where can I find more information about the UTXO Alliance?",
     "content": "<p>Start by signing up to join via the form below. Once you’ve done that, we’ll regularly send some useful and insightful information about the work we’re doing and ways you can get involved.</p> <p>But here are a couple of articles to whet your appetite:</p> <ul> <li><a href='https://iohk.io/en/blog/posts/2021/03/11/cardanos-extended-utxo-accounting-model/'>https://iohk.io/en/blog/posts/2021/03/11/cardanos-extended-utxo-accounting-model/</a></li> <li><a href='https://iohk.io/en/blog/posts/2021/03/12/cardanos-extended-utxo-accounting-model-part-2/'>https://iohk.io/en/blog/posts/2021/03/12/cardanos-extended-utxo-accounting-model-part-2/</a></li> </ul>"
   },
-  "join.title": "Join the alliance",
-  "join.content": "<p>If you’ve read this far, chances are you’re serious about joining the UTXO Alliance. We just need a few more details from you.</p> <p>So tell us...</p>",
-  "join.labels.name": "Your Name",
-  "join.labels.company": "Your Company",
-  "join.labels.email": "Your Email",
-  "join.labels.role": "Your Role",
-  "join.labels.textbox1": "Why do you want to join the UTXO Alliance?",
-  "join.labels.textbox2": "How or what would you contribute to the UTXO Alliance?",
+  "form.title": "Join the alliance",
+  "form.content": "<p>If you’ve read this far, chances are you’re serious about joining the UTXO Alliance. We just need a few more details from you.</p> <p>So tell us...</p>",
+  "form.labels.name": "Your Name",
+  "form.labels.company": "Your Company",
+  "form.labels.email": "Your Email",
+  "form.labels.role": "Your Role",
+  "form.labels.textbox1": "Why do you want to join the UTXO Alliance?",
+  "form.labels.textbox2": "How or what would you contribute to the UTXO Alliance?",
   "footer.columns.length": "3",
   "footer.columns.0.title": "Legal",
   "footer.columns.0.links.length": "2",

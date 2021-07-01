@@ -1,0 +1,50 @@
+@import 'flickity/css/flickity.css';
+
+.flickity-enabled {
+  display: block !important;
+}
+
+// Dots
+.flickity-page-dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 100%;
+  bottom: auto;
+  padding: 0;
+  margin: spacer(40, 0, 0);
+  list-style: none;
+}
+
+.flickity-page-dots .dot {
+  display: block;
+  width: rem(8);
+  height: rem(8);
+  margin: spacer(0, 6, 0, 0);
+  background-color: $body-color;
+  border-radius: 50%;
+  opacity: 1;
+  transition: $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: rem(10);
+    height: rem(10);
+    margin-right: spacer(8);
+  }
+}
+
+.flickity-page-dots .dot.is-selected {
+  background-color: $primary;
+  pointer-events: none;
+}

@@ -53,6 +53,7 @@
 // @import 'bootstrap/scss/utilities/api';
 
 // Vendor
+@import 'vendor/flickity';
 @import 'vendor/plyr';
 
 // Partials
@@ -66,6 +67,7 @@
 @import 'components/Button';
 @import 'components/Header';
 @import 'components/About';
+@import 'components/Testimonials';
 @import 'components/Members';
 @import 'components/Video';
 @import 'components/VideoPlayer';
