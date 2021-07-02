@@ -4,6 +4,7 @@ import backgroundPattern2 from '../assets/images/background-pattern-2.jpg'
 import separator1 from '../assets/images/separator-1.svg'
 import separator2 from '../assets/images/separator-2.svg'
 import separator3 from '../assets/images/separator-3.svg'
+import { TransitionFadeInUp } from './TransitionFadeInUp'
 
 export const About = ({ id, styleType = 1, title, content }) => {
   const [backgroundImage, setBackgroundImage] = useState(backgroundPattern1)
@@ -37,12 +38,18 @@ export const About = ({ id, styleType = 1, title, content }) => {
       />
 
       <div className="container">
-        <h2 className="About__title h1">{title}</h2>
+        <TransitionFadeInUp group>
+          <h2 className="About__title h1" data-transition-element>
+            {title}
+          </h2>
 
-        <div
-          className="About__content"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+          <div
+            className="About__content"
+            dangerouslySetInnerHTML={{ __html: content }}
+            data-transition-element
+            data-transition-delay={250}
+          />
+        </TransitionFadeInUp>
       </div>
 
       <img

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Faq } from './Faq'
+import { TransitionFadeInUp } from './TransitionFadeInUp'
 
 export const Faqs = ({ id, title, items }) => {
   const [activeItem, setActiveItem] = useState(null)
@@ -16,19 +17,26 @@ export const Faqs = ({ id, title, items }) => {
   return (
     <section id={id} className="Faqs">
       <div className="container">
-        <h2 className="Faqs__title">{title}</h2>
+        <TransitionFadeInUp group>
+          <h2 className="Faqs__title" data-transition-element>
+            {title}
+          </h2>
 
-        {items &&
-          items.map(({ id, title, content }) => (
-            <Faq
-              key={id}
-              id={id}
-              title={title}
-              content={content}
-              open={activeItem === id}
-              onClick={handleClick}
-            />
-          ))}
+          {items && (
+            <div data-transition-element data-transition-delay={250}>
+              {items.map(({ id, title, content }) => (
+                <Faq
+                  key={id}
+                  id={id}
+                  title={title}
+                  content={content}
+                  open={activeItem === id}
+                  onClick={handleClick}
+                />
+              ))}
+            </div>
+          )}
+        </TransitionFadeInUp>
       </div>
     </section>
   )

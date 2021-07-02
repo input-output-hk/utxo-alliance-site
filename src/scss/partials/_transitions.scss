@@ -1,3 +1,51 @@
+.transition-fade-in-up {
+  opacity: 0;
+  transform: translate3d(0, rem(20), 0);
+  will-change: opacity, transform;
+
+  &-enter-active,
+  &-enter-done {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &-enter-active {
+    transition: opacity 1000ms ease, transform 1000ms ease;
+  }
+
+  &-enter-done {
+    will-change: unset;
+  }
+}
+
+.group-transition-fade-in-up {
+  [data-transition-element] {
+    opacity: 0;
+    transform: translate3d(0, rem(20), 0);
+    will-change: opacity, transform;
+  }
+
+  &-enter-active,
+  &-enter-done {
+    [data-transition-element] {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &-enter-active {
+    [data-transition-element] {
+      transition: opacity 1000ms ease, transform 1000ms ease;
+    }
+  }
+
+  &-enter-done {
+    [data-transition-element] {
+      will-change: unset;
+    }
+  }
+}
+
 .transition-video-modal {
   &-enter {
     opacity: 0;

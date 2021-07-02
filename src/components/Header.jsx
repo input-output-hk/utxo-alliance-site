@@ -7,6 +7,7 @@ import headerShapes765wPng from '../assets/images/header-shapes-765w.png'
 import headerShapes1530wPng from '../assets/images/header-shapes-1530w.png'
 import headerShapes2295wPng from '../assets/images/header-shapes-2295w.png'
 import headerShapes3060wPng from '../assets/images/header-shapes-3060w.png'
+import { TransitionFadeInUp } from './TransitionFadeInUp'
 import { useVideoModal } from './VideoModal'
 
 gsap.registerPlugin(ScrollToPlugin)
@@ -82,7 +83,9 @@ export const Header = ({ title, links }) => {
       </nav>
 
       <div className="container">
-        <h1 className="Header__title">{title}</h1>
+        <TransitionFadeInUp>
+          <h1 className="Header__title">{title}</h1>
+        </TransitionFadeInUp>
 
         <button
           className="Header__play-button"

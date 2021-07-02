@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Button } from './Button'
 import { TextField } from './TextField'
 import backgroundImage from '../assets/images/background-pattern-1.jpg'
+import { TransitionFadeInUp } from './TransitionFadeInUp'
 
 const stripHtml = (html) => {
   var temporalDivElement = document.createElement('div')
@@ -96,85 +97,96 @@ export const Form = ({ id, title, content, labels }) => {
       />
 
       <div className="container">
-        <h2 className="Form__title h1">{title}</h2>
+        <TransitionFadeInUp group>
+          <h2 className="Form__title h1" data-transition-element>
+            {title}
+          </h2>
 
-        <div
-          className="Form__content"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+          <div
+            className="Form__content"
+            dangerouslySetInnerHTML={{ __html: content }}
+            data-transition-element
+            data-transition-delay={250}
+          />
 
-        <form className="Form__form" onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-md-6">
-              <TextField
-                id={`${id}-name`}
-                name="name"
-                label={labels.name}
-                onBlur={handleChange}
-                onChange={handleChange}
-              />
+          <form
+            className="Form__form"
+            onSubmit={handleSubmit}
+            data-transition-element
+            data-transition-delay={500}
+          >
+            <div className="row">
+              <div className="col-md-6">
+                <TextField
+                  id={`${id}-name`}
+                  name="name"
+                  label={labels.name}
+                  onBlur={handleChange}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <TextField
+                  id={`${id}-company`}
+                  name="company"
+                  label={labels.company}
+                  onBlur={handleChange}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <TextField
+                  id={`${id}-email`}
+                  name="email"
+                  type="email"
+                  label={labels.email}
+                  onBlur={handleChange}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <TextField
+                  id={`${id}-role`}
+                  name="role"
+                  label={labels.role}
+                  onBlur={handleChange}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <TextField
+                  id={`${id}-textbox1`}
+                  name="textbox1"
+                  label={labels.textbox1}
+                  multiline
+                  onBlur={handleChange}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="col-md-6">
+                <TextField
+                  id={`${id}-textbox2`}
+                  name="textbox2"
+                  label={labels.textbox2}
+                  multiline
+                  onBlur={handleChange}
+                  onChange={handleChange}
+                />
+              </div>
+
+              <div className="col">
+                <Button type="submit" disabled={isSubmitting}>
+                  Submit
+                </Button>
+              </div>
             </div>
-
-            <div className="col-md-6">
-              <TextField
-                id={`${id}-company`}
-                name="company"
-                label={labels.company}
-                onBlur={handleChange}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="col-md-6">
-              <TextField
-                id={`${id}-email`}
-                name="email"
-                type="email"
-                label={labels.email}
-                onBlur={handleChange}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="col-md-6">
-              <TextField
-                id={`${id}-role`}
-                name="role"
-                label={labels.role}
-                onBlur={handleChange}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="col-md-6">
-              <TextField
-                id={`${id}-textbox1`}
-                name="textbox1"
-                label={labels.textbox1}
-                multiline
-                onBlur={handleChange}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="col-md-6">
-              <TextField
-                id={`${id}-textbox2`}
-                name="textbox2"
-                label={labels.textbox2}
-                multiline
-                onBlur={handleChange}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="col">
-              <Button type="submit" disabled={isSubmitting}>
-                Submit
-              </Button>
-            </div>
-          </div>
-        </form>
+          </form>
+        </TransitionFadeInUp>
       </div>
     </section>
   )

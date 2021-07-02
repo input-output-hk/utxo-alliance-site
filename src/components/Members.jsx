@@ -4,6 +4,7 @@ import logoSymbolSvg from '../assets/images/logo-symbol.svg'
 import iconElementSvg from '../assets/images/icon-element.svg'
 import backgroundPattern1 from '../assets/images/background-pattern-1.jpg'
 import backgroundPattern2 from '../assets/images/background-pattern-2.jpg'
+import { TransitionFadeInUp } from './TransitionFadeInUp'
 
 export const Members = ({ id, title, content }) => {
   return (
@@ -21,21 +22,29 @@ export const Members = ({ id, title, content }) => {
         <div className="Members__col-1-content">
           <img className="Members__col-1-image" src={iconElementSvg} alt="" />
 
-          <h2 className="Members__col-1-title h1">{title}</h2>
+          <TransitionFadeInUp group>
+            <h2 className="Members__col-1-title h1" data-transition-element>
+              {title}
+            </h2>
 
-          <div
-            className="Members__col-1-symbols"
-            role="presentation"
-            aria-hidden="true"
-          >
-            <img src={logoSymbolSvg} alt="" />
-            <img src={logoSymbolSvg} alt="" />
-          </div>
+            <div
+              className="Members__col-1-symbols"
+              role="presentation"
+              aria-hidden="true"
+              data-transition-element
+              data-transition-delay={250}
+            >
+              <img src={logoSymbolSvg} alt="" />
+              <img src={logoSymbolSvg} alt="" />
+            </div>
 
-          <div
-            className="Members__col-1-text"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+            <div
+              className="Members__col-1-text"
+              dangerouslySetInnerHTML={{ __html: content }}
+              data-transition-element
+              data-transition-delay={500}
+            />
+          </TransitionFadeInUp>
         </div>
       </div>
 
