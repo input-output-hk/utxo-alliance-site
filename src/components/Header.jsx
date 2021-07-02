@@ -33,16 +33,8 @@ export const Header = ({ title, links }) => {
         <div className="container">
           {links && (
             <ul className="Header__navbar-links">
-              {links.map(({ title, href, target }, index) => (
-                <li
-                  key={title}
-                  style={{
-                    marginRight:
-                      index + 1 === Math.floor(links.length / 2)
-                        ? 'auto'
-                        : undefined,
-                  }}
-                >
+              {links.map(({ title, href, target }) => (
+                <li key={title}>
                   <a href={href} target={target}>
                     {title}
                   </a>
