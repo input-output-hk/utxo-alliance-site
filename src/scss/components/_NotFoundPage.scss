@@ -1,0 +1,19 @@
+.NotFoundPage {
+  margin-top: auto;
+  padding-top: spacer(260);
+  padding-bottom: spacer(160);
+  text-align: center;
+
+  &__title {
+    margin: spacer(0, 0, 30);
+  }
+
+  &__content {
+    max-width: 80%;
+    margin: 0 auto;
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

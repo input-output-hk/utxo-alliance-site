@@ -1,19 +1,31 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Layout } from '../components/Layout'
-import { useIntl } from "gatsby-plugin-intl"
 
 // markup
-const NotFoundPage = ({ data }) => {
-  const intl = useIntl()
+const NotFoundPage = ({ intl, data }) => {
   return (
     <Layout data={data}>
-      <h1>{intl.title} 404</h1>
+      <div className="NotFoundPage">
+        <div className="container">
+          <h1 className="NotFoundPage__title">
+            {intl.formatMessage({ id: 'page404.title' })}
+          </h1>
+
+          <div
+            className="NotFoundPage__content"
+            dangerouslySetInnerHTML={{
+              __html: intl.formatMessage({ id: 'page404.content' }),
+            }}
+          />
+        </div>
+      </div>
     </Layout>
   )
 }
 
-export default NotFoundPage
+export default injectIntl(NotFoundPage)
 
 export const query = graphql`
   query NotFoundPageQuery {

@@ -152,5 +152,8 @@
     "title": "Offices",
     "href": "#",
     "target": "_self"
-  }
+  },
+
+  "page404.title": "404 - Page Not Found",
+  "page404.content": "<p>Sorry, the page you are looking for does not exist or has been moved.</p>"
 }
