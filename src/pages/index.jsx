@@ -15,7 +15,7 @@ import videoPosterJpg from '../assets/images/video-poster.jpg'
 const IndexPage = ({ intl, data }) => {
   return (
     <Layout data={data}>
-      <div className="pictures-element">
+      <div id="about" className="pictures-element">
         <About
           styleType={1}
           title={intl.formatMessage({ id: 'who.title' })}
@@ -42,6 +42,7 @@ const IndexPage = ({ intl, data }) => {
       </div>
 
       <Testimonials
+        id="testimonials"
         title={intl.formatMessage({ id: 'testimonials.title' })}
         quotes={[
           ...Array(
@@ -59,11 +60,13 @@ const IndexPage = ({ intl, data }) => {
       />
 
       <Members
+        id="members"
         title={intl.formatMessage({ id: 'members.title' })}
         content={intl.formatMessage({ id: 'members.content' })}
       />
 
       <Video
+        id="utxo-model"
         preTitle={intl.formatMessage({ id: 'video.preTitle' })}
         title={intl.formatMessage({ id: 'video.title' })}
         provider={intl.formatMessage({ id: 'video.provider' })}
@@ -72,20 +75,21 @@ const IndexPage = ({ intl, data }) => {
       />
 
       <Faqs
+        id="faq"
         title={intl.formatMessage({ id: 'faqs.title' })}
         items={[
           ...Array(
             parseInt(intl.formatMessage({ id: 'faqs.items.length' }))
           ).keys(),
         ].map((item) => ({
-          id: `faqs-item-${item}`,
+          id: `faq-${item}`,
           title: intl.formatMessage({ id: `faqs.items.${item}.title` }),
           content: intl.formatMessage({ id: `faqs.items.${item}.content` }),
         }))}
       />
 
       <Form
-        id="join-the-alliance"
+        id="join"
         title={intl.formatMessage({ id: 'form.title' })}
         content={intl.formatMessage({ id: 'form.content' })}
         labels={{

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Faq } from './Faq'
 
-export const Faqs = ({ title, items }) => {
+export const Faqs = ({ id, title, items }) => {
   const [activeItem, setActiveItem] = useState(null)
 
   const handleClick = (id) => {
@@ -14,7 +14,7 @@ export const Faqs = ({ title, items }) => {
   }
 
   return (
-    <section className="Faqs">
+    <section id={id} className="Faqs">
       <div className="container">
         <h2 className="Faqs__title">{title}</h2>
 

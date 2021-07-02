@@ -5,9 +5,9 @@ import ecoSystemSvg from '../assets/images/eco-system.svg'
 import backgroundPattern1 from '../assets/images/background-pattern-1.jpg'
 import backgroundPattern2 from '../assets/images/background-pattern-2.jpg'
 
-export const Members = ({ title, content }) => {
+export const Members = ({ id, title, content }) => {
   return (
-    <section className="Members">
+    <section id={id} className="Members">
       <div className="Members__col-1">
         <img
           className="Members__col-1-background"

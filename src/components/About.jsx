@@ -5,7 +5,7 @@ import separator1 from '../assets/images/separator-1.svg'
 import separator2 from '../assets/images/separator-2.svg'
 import separator3 from '../assets/images/separator-3.svg'
 
-export const About = ({ styleType = 1, title, content }) => {
+export const About = ({ id, styleType = 1, title, content }) => {
   const [backgroundImage, setBackgroundImage] = useState(backgroundPattern1)
   const [separatorImage, setSeparatorImage] = useState(separator1)
 
@@ -27,7 +27,7 @@ export const About = ({ styleType = 1, title, content }) => {
   }, [styleType])
 
   return (
-    <section className={`About About--${styleType}`}>
+    <section id={id} className={`About About--${styleType}`}>
       <img
         className="About__background"
         src={backgroundImage}

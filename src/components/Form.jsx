@@ -86,7 +86,7 @@ export const Form = ({ id, title, content, labels }) => {
   }
 
   return (
-    <section className="Form">
+    <section id={id} className="Form">
       <img
         className="Form__background"
         src={backgroundImage}

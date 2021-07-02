@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import backgroundImage from '../assets/images/background-pattern-2.jpg'
 import separatorImage from '../assets/images/separator-3.svg'
 
-export const Testimonials = ({ title, quotes }) => {
+export const Testimonials = ({ id, title, quotes }) => {
   const sliderEl = useRef(null)
   const flkty = useRef(null)
 
@@ -35,7 +35,7 @@ export const Testimonials = ({ title, quotes }) => {
   }, [quotes.length])
 
   return (
-    <section className="Testimonials">
+    <section id={id} className="Testimonials">
       <img
         className="Testimonials__background"
         src={backgroundImage}

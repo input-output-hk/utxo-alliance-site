@@ -2,9 +2,9 @@ import React from 'react'
 import separatorImage from '../assets/images/separator-1.svg'
 import { VideoPlayer } from './VideoPlayer'
 
-export const Video = ({ preTitle, title, provider, embedId, poster }) => {
+export const Video = ({ id, preTitle, title, provider, embedId, poster }) => {
   return (
-    <section className="Video">
+    <section id={id} className="Video">
       <div className="Video__container">
         <div className="Video__col-1">
           <div className="Video__col-1-content">

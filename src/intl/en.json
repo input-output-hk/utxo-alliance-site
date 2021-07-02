@@ -2,25 +2,35 @@
   "title": "UTXO Alliance",
   "meta.description": "UTXO Alliance",
   "header.title": "Complete cross-chain collaboration",
-  "header.links.length": "4",
+  "header.links.length": "6",
   "header.links.0": {
-    "title": "Join",
-    "href": "#",
+    "title": "About",
+    "href": "#about",
     "target": "_self"
   },
   "header.links.1": {
-    "title": "Purpose",
-    "href": "#",
+    "title": "Testimonials",
+    "href": "#testimonials",
     "target": "_self"
   },
   "header.links.2": {
     "title": "Members",
-    "href": "#",
+    "href": "#members",
     "target": "_self"
   },
   "header.links.3": {
-    "title": "Join 2",
-    "href": "#",
+    "title": "UTXO Model",
+    "href": "#utxo-model",
+    "target": "_self"
+  },
+  "header.links.4": {
+    "title": "FAQ",
+    "href": "#faq",
+    "target": "_self"
+  },
+  "header.links.5": {
+    "title": "Join",
+    "href": "#join",
     "target": "_self"
   },
   "who.title": "Who we are",
