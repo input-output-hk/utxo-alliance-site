@@ -1,44 +1,52 @@
 {
   "title": "UTXO Alliance",
   "meta.description": "UTXO Alliance",
-  "header.title": "Complete cross-chain collaboration",
-  "header.links.length": "6",
-  "header.links.0": {
+
+  "navbar.links.length": "6",
+  "navbar.links.0": {
     "title": "About",
-    "href": "#about",
+    "href": "/#about",
     "target": "_self"
   },
-  "header.links.1": {
+  "navbar.links.1": {
     "title": "Testimonials",
-    "href": "#testimonials",
+    "href": "/#testimonials",
     "target": "_self"
   },
-  "header.links.2": {
+  "navbar.links.2": {
     "title": "Members",
-    "href": "#members",
+    "href": "/#members",
     "target": "_self"
   },
-  "header.links.3": {
+  "navbar.links.3": {
     "title": "UTXO Model",
-    "href": "#utxo-model",
+    "href": "/#utxo-model",
     "target": "_self"
   },
-  "header.links.4": {
+  "navbar.links.4": {
     "title": "FAQ",
-    "href": "#faq",
+    "href": "/#faq",
     "target": "_self"
   },
-  "header.links.5": {
+  "navbar.links.5": {
     "title": "Join",
-    "href": "#join",
+    "href": "/#join",
     "target": "_self"
   },
+
+  "header.title": "Complete cross-chain collaboration",
+  "header.video.provider": "youtube",
+  "header.video.embedId": "dQw4w9WgXcQ",
+
   "who.title": "Who we are",
   "who.content": "<p>The UTXO Alliance is a blockchain-focused, asset-agnostic initiative, created to kickstart collaboration across blockchains with shared characteristics.</p> <p>Our aim is to tap into the power of Unspent Transaction Outputs (UTXOs) to ensure a more secure, stable, and scalable web3 landscape.</p> <p>We also want to improve the way digital assets are exchanged. The more interoperability everyone has between blockchains using the same protocols, the more value we can derive from all of them.</p>",
+
   "what.title": "What we’re doing",
   "what.content": "<p>The UTXO Alliance was created to ensure anyone can safely share digital assets, such as coins, tokens, data, and smart contracts, using blockchain technology. To do this, we need to grow participation, expand use cases, and both educate and inspire mainstream users.</p> <p>By encouraging those at the forefront of the technology to engage in shared efforts and initiatives, we aim to encourage proactive collaboration across research, expertise, and innovation in the blockchain space.</p>",
+
   "why.title": "Why it matters",
   "why.content": "<p>Many people are waking up to what cryptocurrencies can offer – how they can create monetary value. We now need them to witness other blockchain strengths.</p> <p>At the UTXO Alliance, we believe that making it easier to transact across different blockchains will encourage broader use of the technology. To do this, we need to advocate interoperability across systems with similar outlooks – in this case, the UTXO model.</p> <p>Ultimately, the importance of this initiative concerns the use of data. It all comes down to inputs and outputs – the amount of data used, the speed with which data is processed, transaction costs, and energy usage.</p>",
+
   "testimonials.title": "Testimonials",
   "testimonials.quotes.length": "4",
   "testimonials.quotes.0": {
@@ -57,12 +65,15 @@
     "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
     "footer": "Salvador Dali, Surrealist, Draftsman"
   },
+
   "members.title": "Who should join?",
   "members.content": "<p>Our UTXO Alliance members include some of the best and brightest blockchain minds out there. We’re looking for professionals and organisations that are developing the UTXO-based blockchain tools and techniques needed to evolve the standard; partners to take part in education, technical assistance, and information sessions.</p> <p>Anyone that’s committed to furthering this transformative technology with the drive, knowledge, and passion to do so is welcome to join.</p>",
+
   "video.preTitle": "6 minutes video",
   "video.title": "Deep dive into the UTXO Alliance",
   "video.provider": "vimeo",
   "video.embedId": "563568179",
+
   "faqs.title": "FREQUENTLY asked QUESTIONS",
   "faqs.items.length": "5",
   "faqs.items.0": {
@@ -85,6 +96,7 @@
     "title": "Where can I find more information about the UTXO Alliance?",
     "content": "<p>Start by signing up to join via the form below. Once you’ve done that, we’ll regularly send some useful and insightful information about the work we’re doing and ways you can get involved.</p> <p>But here are a couple of articles to whet your appetite:</p> <ul> <li><a href='https://iohk.io/en/blog/posts/2021/03/11/cardanos-extended-utxo-accounting-model/'>https://iohk.io/en/blog/posts/2021/03/11/cardanos-extended-utxo-accounting-model/</a></li> <li><a href='https://iohk.io/en/blog/posts/2021/03/12/cardanos-extended-utxo-accounting-model-part-2/'>https://iohk.io/en/blog/posts/2021/03/12/cardanos-extended-utxo-accounting-model-part-2/</a></li> </ul>"
   },
+
   "form.title": "Join the alliance",
   "form.content": "<p>If you’ve read this far, chances are you’re serious about joining the UTXO Alliance. We just need a few more details from you.</p> <p>So tell us...</p>",
   "form.labels.name": "Your Name",
@@ -93,6 +105,7 @@
   "form.labels.role": "Your Role",
   "form.labels.textbox1": "Why do you want to join the UTXO Alliance?",
   "form.labels.textbox2": "How or what would you contribute to the UTXO Alliance?",
+
   "footer.columns.length": "3",
   "footer.columns.0.title": "Legal",
   "footer.columns.0.links.length": "2",

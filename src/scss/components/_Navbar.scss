@@ -1,0 +1,110 @@
+.Navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: spacer(60);
+  padding-bottom: spacer(8);
+  z-index: 10;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 110%;
+    max-width: rem(1600);
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__logo {
+    position: absolute;
+    top: spacer(20);
+    left: 50%;
+    @include rfs(rem(136), width);
+    min-width: rem(100);
+    height: auto;
+    transform: translateX(-50%);
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    @include font-size($font-size-sm);
+    font-weight: $font-weight-bold;
+
+    li {
+      flex-shrink: 0;
+      @include rfs(rem(40), margin-right);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      color: $color-11;
+      text-decoration: none;
+      transition: $transition-base;
+
+      &:hover {
+        color: $color-9;
+      }
+    }
+  }
+
+  @media (min-width: 375px) {
+    &__links {
+      padding-left: 12.5%;
+      padding-right: 12.5%;
+      @include font-size(rem(14));
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: spacer(80);
+    padding-bottom: spacer(12);
+
+    &__logo {
+      min-width: rem(120);
+    }
+
+    &__links {
+      @include font-size($font-size-base);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .container {
+      width: 80%;
+    }
+
+    &__links {
+      padding: 0;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    &__background {
+      width: 100%;
+    }
+  }
+}

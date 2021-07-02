@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import '../scss/styles.scss'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Helmet } from 'react-helmet'
-import { Header } from './Header'
+import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { VideoModalProvider } from './VideoModal'
 
@@ -40,16 +40,15 @@ export const Layout = ({ children, data }) => {
 
       <main className="main-wrapper">
         <VideoModalProvider>
-          <Header
-            title={intl.formatMessage({ id: `header.title` })}
+          <Navbar
             links={[
               ...Array(
-                parseInt(intl.formatMessage({ id: `header.links.length` }))
+                parseInt(intl.formatMessage({ id: `navbar.links.length` }))
               ).keys(),
             ].map((link) => ({
-              title: intl.formatMessage({ id: `header.links.${link}.title` }),
-              href: intl.formatMessage({ id: `header.links.${link}.href` }),
-              target: intl.formatMessage({ id: `header.links.${link}.target` }),
+              title: intl.formatMessage({ id: `navbar.links.${link}.title` }),
+              href: intl.formatMessage({ id: `navbar.links.${link}.href` }),
+              target: intl.formatMessage({ id: `navbar.links.${link}.target` }),
             }))}
           />
 

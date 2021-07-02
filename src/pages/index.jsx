@@ -2,6 +2,7 @@ import React from 'react'
 import { Layout } from '../components/Layout'
 import { injectIntl } from 'gatsby-plugin-intl'
 import { graphql } from 'gatsby'
+import { Header } from '../components/Header'
 import { About } from '../components/About'
 import { Testimonials } from '../components/Testimonials'
 import { Members } from '../components/Members'
@@ -15,6 +16,14 @@ import videoPosterJpg from '../assets/images/video-poster.jpg'
 const IndexPage = ({ intl, data }) => {
   return (
     <Layout data={data}>
+      <Header
+        title={intl.formatMessage({ id: `header.title` })}
+        video={{
+          provider: intl.formatMessage({ id: 'header.video.provider' }),
+          embedId: intl.formatMessage({ id: 'header.video.embedId' }),
+        }}
+      />
+
       <div id="about" className="pictures-element">
         <About
           styleType={1}
