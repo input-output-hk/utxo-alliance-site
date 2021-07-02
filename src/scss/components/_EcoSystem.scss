@@ -5,7 +5,7 @@
 
 #EcoSystem {
   &__sun {
-    animation-name: floating;
+    animation-name: sun;
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -17,7 +17,7 @@
   }
 
   &__asteroids > * {
-    animation-name: floating;
+    animation-name: asteroids;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-play-state: paused;
@@ -37,7 +37,16 @@
   }
 }
 
-@keyframes floating {
+@keyframes sun {
+  0% {
+    transform: rotate(0deg) translate3d(1%, 0, 0) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate3d(1%, 0, 0) rotate(-360deg);
+  }
+}
+
+@keyframes asteroids {
   0% {
     transform: rotate(0deg) translate3d(-1.5rem, 0, 0) rotate(0deg);
   }

@@ -154,6 +154,7 @@
 
   &-links {
     display: flex;
+    justify-content: center;
     align-items: center;
     list-style: none;
     margin: 0;
@@ -163,6 +164,7 @@
     font-weight: $font-weight-bold;
 
     li {
+      flex-shrink: 0;
       @include rfs(rem(40), margin-right);
 
       &:last-child {
@@ -191,11 +193,10 @@
   }
 
   @include media-breakpoint-up(md) {
-    padding-bottom: spacer(20);
+    padding-top: spacer(80);
+    padding-bottom: spacer(12);
 
     &-logo {
-      top: auto;
-      bottom: spacer(26);
       min-width: rem(120);
     }
 
