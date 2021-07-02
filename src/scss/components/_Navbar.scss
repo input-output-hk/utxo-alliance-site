@@ -57,7 +57,7 @@
       display: block;
       color: $color-11;
       text-decoration: none;
-      transition: $transition-base;
+      @include transition-base;
 
       &:hover {
         color: $color-9;

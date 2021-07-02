@@ -9,7 +9,7 @@
   color: $color-10;
   border: 2px solid $color-9;
   border-radius: rem(4);
-  transition: $transition-base;
+  @include transition-base;
 
   &:hover,
   &:focus {

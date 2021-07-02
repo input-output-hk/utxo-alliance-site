@@ -87,3 +87,11 @@ $small-font-size: 0.875em;
 // RFS
 $rfs-base-value: 1rem;
 $enable-rfs: true;
+
+// Transitions
+@mixin transition-base {
+  transition-property: color, background-color, border-color, box-shadow,
+    opacity, visibility, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}

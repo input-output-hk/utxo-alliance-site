@@ -26,7 +26,7 @@
   background-color: $body-color;
   border-radius: 50%;
   opacity: 1;
-  transition: $transition-base;
+  @include transition-base;
   cursor: pointer;
 
   &:hover {

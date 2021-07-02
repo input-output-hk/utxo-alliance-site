@@ -14,7 +14,7 @@
     border: 0 solid;
     border-color: $color-4;
     border-bottom-width: 2px;
-    transition: $transition-base;
+    @include transition-base;
 
     &:hover,
     &:focus {

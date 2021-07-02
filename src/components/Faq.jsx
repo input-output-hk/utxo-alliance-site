@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
+import { TransitionExpand } from './TransitionExpand'
 
 export const Faq = ({
   id,
@@ -7,17 +8,6 @@ export const Faq = ({
   open = false,
   onClick = () => {},
 }) => {
-  const contentEl = useRef(null)
-  const [height, setHeight] = useState(null)
-
-  useEffect(() => {
-    if (open) {
-      setHeight(contentEl.current?.offsetHeight)
-    } else {
-      setHeight(null)
-    }
-  }, [open])
-
   return (
     <article className="Faq">
       <h3 className="Faq__title">
@@ -36,13 +26,13 @@ export const Faq = ({
         </a>
       </h3>
 
-      <div id={id} className="Faq__content-wrapper" style={{ height }}>
+      <TransitionExpand expand={open}>
         <div
-          ref={contentEl}
+          id={id}
           className="Faq__content"
           dangerouslySetInnerHTML={{ __html: content }}
         ></div>
-      </div>
+      </TransitionExpand>
     </article>
   )
 }

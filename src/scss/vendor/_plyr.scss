@@ -34,7 +34,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      transition: $transition-base;
+      @include transition-base;
       pointer-events: none;
     }
 

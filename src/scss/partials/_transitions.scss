@@ -65,3 +65,14 @@
     transition: opacity 500ms ease;
   }
 }
+
+.transition-expand {
+  height: 0;
+  overflow: hidden;
+  will-change: height;
+
+  &-enter-active,
+  &-exit-active {
+    transition: height 300ms ease-in-out;
+  }
+}

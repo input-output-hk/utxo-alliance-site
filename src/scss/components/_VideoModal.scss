@@ -38,7 +38,7 @@
       display: block;
       width: 50%;
       height: auto;
-      transition: $transition-base;
+      @include transition-base;
     }
 
     &:hover {
