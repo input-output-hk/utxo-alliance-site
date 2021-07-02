@@ -37,6 +37,7 @@
     "gatsby-plugin-sitemap": "^3.3.0",
     "gatsby-source-filesystem": "^3.3.0",
     "gatsby-transformer-sharp": "^3.3.0",
+    "gsap": "./gsap-bonus.tgz",
     "lodash": "^4.17.21",
     "plyr": "^3.6.8",
     "react": "^17.0.1",
