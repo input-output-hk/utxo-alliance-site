@@ -1,7 +1,7 @@
 import React from 'react'
+import { EcoSystem } from './EcoSystem'
 import logoSymbolSvg from '../assets/images/logo-symbol.svg'
 import iconElementSvg from '../assets/images/icon-element.svg'
-import ecoSystemSvg from '../assets/images/eco-system.svg'
 import backgroundPattern1 from '../assets/images/background-pattern-1.jpg'
 import backgroundPattern2 from '../assets/images/background-pattern-2.jpg'
 
@@ -49,7 +49,7 @@ export const Members = ({ id, title, content }) => {
           loading="lazy"
         />
 
-        <img className="Members__col-2-image" src={ecoSystemSvg} alt="" />
+        <EcoSystem className="Members__col-2-image" />
       </div>
     </section>
   )

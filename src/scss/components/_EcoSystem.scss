@@ -1,0 +1,47 @@
+.EcoSystem {
+  overflow: visible;
+  pointer-events: none;
+}
+
+#EcoSystem {
+  &__sun {
+    animation-name: floating;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+
+    .inView & {
+      animation-play-state: running;
+    }
+  }
+
+  &__asteroids > * {
+    animation-name: floating;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+
+    .inView & {
+      animation-play-state: running;
+    }
+
+    &:nth-child(odd) {
+      animation-duration: 20s;
+      animation-direction: reverse;
+    }
+
+    &:nth-child(even) {
+      animation-duration: 30s;
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: rotate(0deg) translate3d(-1.5rem, 0, 0) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate3d(-1.5rem, 0, 0) rotate(-360deg);
+  }
+}
