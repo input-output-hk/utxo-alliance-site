@@ -1,7 +1,7 @@
 .Testimonials {
   position: relative;
   padding-top: rem(60);
-  padding-bottom: rem(140);
+  padding-bottom: rem(120);
   color: $white;
   background-color: $color-3;
 
@@ -14,18 +14,6 @@
     object-fit: cover;
     opacity: 0.1;
     mix-blend-mode: overlay;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  &__separator {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    @include rfs(rem(90), height);
-    transform: translateY(50%);
-    z-index: 10;
     pointer-events: none;
     user-select: none;
   }

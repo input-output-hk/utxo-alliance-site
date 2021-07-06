@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
 import { VideoPlayer } from './VideoPlayer'
 import { CSSTransition } from 'react-transition-group'
+import { enableMainScrollbar, disableMainScrollbar } from '../helpers'
 
 const VideoModalContext = createContext()
 
@@ -12,15 +13,19 @@ const VideoModal = ({ provider, embedId, poster }) => {
   const closeModal = () => setVideoModal(null)
 
   return (
-    <div className="VideoModal">
+    <div className="VideoModal" aria-modal={true} role="dialog" tabIndex={-1}>
       <div className="VideoModal__backdrop" onClick={closeModal}></div>
 
       <button
         className="VideoModal__close"
-        aria-label="Close Video Modal"
+        aria-label="Close"
         onClick={closeModal}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 319.99 319.99">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 319.99 319.99"
+          aria-hidden="true"
+        >
           <path
             fill="currentColor"
             d="M193.94,160,296.5,57.44l21.15-21.15a8,8,0,0,0,0-11.31L295,2.35a8,8,0,0,0-11.31,0L160,126.06,36.29,2.34A8,8,0,0,0,25,2.34L2.34,25a8,8,0,0,0,0,11.31L126.06,160,2.34,283.71a8,8,0,0,0,0,11.31L25,317.65a8,8,0,0,0,11.31,0L160,193.94,262.56,296.5l21.15,21.15a8,8,0,0,0,11.31,0L317.65,295a8,8,0,0,0,0-11.31Z"
@@ -42,22 +47,6 @@ const VideoModal = ({ provider, embedId, poster }) => {
 
 export const VideoModalProvider = ({ children }) => {
   const [video, setVideo] = useState(null)
-
-  const disableMainScrollbar = () => {
-    console.log('disableMainScrollbar')
-    const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth
-
-    if (scrollbarWidth > 0) {
-      document.body.classList.add('overflow-hidden')
-      document.body.style.paddingRight = `${scrollbarWidth}px`
-    }
-  }
-
-  const enableMainScrollbar = () => {
-    document.body.classList.remove('overflow-hidden')
-    document.body.style.paddingRight = ''
-  }
 
   return (
     <VideoModalContext.Provider value={setVideo}>

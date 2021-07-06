@@ -5,7 +5,7 @@
   width: 100%;
   padding-top: spacer(60);
   padding-bottom: spacer(8);
-  z-index: 10;
+  z-index: 100;
 
   &__background {
     position: absolute;
@@ -25,16 +25,16 @@
 
   &__logo {
     position: absolute;
-    top: spacer(20);
+    top: 50%;
     left: 50%;
     @include rfs(rem(136), width);
     min-width: rem(100);
     height: auto;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
 
   &__links {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -86,6 +86,17 @@
     }
   }
 
+  @include media-breakpoint-up(lg) {
+    &__logo {
+      top: spacer(20);
+      transform: translateX(-50%);
+    }
+
+    &__links {
+      display: flex;
+    }
+  }
+
   @include media-breakpoint-up(xl) {
     .container {
       width: 80%;
@@ -105,6 +116,118 @@
   @media (min-width: 1600px) {
     &__background {
       width: 100%;
+    }
+  }
+}
+
+.Navbar__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-1;
+  overflow-y: auto;
+  will-change: opacity;
+
+  &-open {
+    position: absolute;
+    top: 50%;
+    right: 12.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include rfs(rem(60), width);
+    @include rfs(rem(60), height);
+    color: $color-7;
+    transform: translateY(-50%);
+
+    svg {
+      display: block;
+      width: 60%;
+      height: auto;
+      @include transition-base;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include rfs(rem(60), width);
+    @include rfs(rem(60), height);
+    color: $color-1;
+    background-color: $color-7;
+    border-bottom-left-radius: 25%;
+    z-index: 10;
+
+    svg {
+      display: block;
+      width: 50%;
+      height: auto;
+      @include transition-base;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &-container {
+    position: relative;
+    width: 100%;
+    margin: auto 0;
+    @include rfs(rem(60), padding);
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      @include rfs(rem(40), margin-bottom);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      display: block;
+      color: $color-7;
+      text-decoration: none;
+      @include transition-base;
+
+      &:hover {
+        color: $color-9;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &-open {
+      right: 10vw;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+
+    &-open {
+      display: none !important;
     }
   }
 }

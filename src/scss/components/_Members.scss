@@ -1,6 +1,18 @@
 .Members {
   position: relative;
 
+  &__separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: rem(12);
+    transform: translateY(50%);
+    z-index: 10;
+    pointer-events: none;
+    user-select: none;
+  }
+
   @include media-breakpoint-up(lg) {
     display: flex;
     flex-direction: row-reverse;
@@ -51,6 +63,8 @@
 
   &-symbols {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: spacer(12);
 
     img {
@@ -89,6 +103,10 @@
 
     &-image {
       max-width: 100%;
+    }
+
+    &-symbols {
+      justify-content: flex-start;
     }
   }
 }

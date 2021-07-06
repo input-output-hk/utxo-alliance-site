@@ -46,6 +46,36 @@
   }
 }
 
+.transition-navbar-modal {
+  display: none;
+
+  &-enter,
+  &-enter-active,
+  &-enter-done,
+  &-exit,
+  &-exit-active {
+    display: flex;
+  }
+
+  &-enter {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  &-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: transform 500ms ease;
+  }
+
+  &-exit {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &-exit-active {
+    transform: translate3d(100%, 0, 0);
+    transition: transform 500ms ease;
+  }
+}
+
 .transition-video-modal {
   &-enter {
     opacity: 0;

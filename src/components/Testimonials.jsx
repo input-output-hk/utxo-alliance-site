@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import backgroundImage from '../assets/images/background-pattern-2.jpg'
-import separatorImage from '../assets/images/separator-3.svg'
 import { TransitionFadeInUp } from './TransitionFadeInUp'
 
 export const Testimonials = ({ id, title, quotes }) => {
@@ -85,14 +84,6 @@ export const Testimonials = ({ id, title, quotes }) => {
           </div>
         )}
       </TransitionFadeInUp>
-
-      <img
-        className="Testimonials__separator"
-        src={separatorImage}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-      />
     </section>
   )
 }

@@ -38,7 +38,7 @@ const IndexPage = ({ intl, data }) => {
         />
 
         <About
-          styleType={1}
+          styleType={2}
           title={intl.formatMessage({ id: 'why.title' })}
           content={intl.formatMessage({ id: 'why.content' })}
         />
@@ -49,6 +49,12 @@ const IndexPage = ({ intl, data }) => {
           alt=""
         />
       </div>
+
+      <Members
+        id="members"
+        title={intl.formatMessage({ id: 'members.title' })}
+        content={intl.formatMessage({ id: 'members.content' })}
+      />
 
       <Testimonials
         id="testimonials"
@@ -66,12 +72,6 @@ const IndexPage = ({ intl, data }) => {
             id: `testimonials.quotes.${item}.footer`,
           }),
         }))}
-      />
-
-      <Members
-        id="members"
-        title={intl.formatMessage({ id: 'members.title' })}
-        content={intl.formatMessage({ id: 'members.content' })}
       />
 
       <Video

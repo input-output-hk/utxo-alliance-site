@@ -4,6 +4,7 @@ import logoSymbolSvg from '../assets/images/logo-symbol.svg'
 import iconElementSvg from '../assets/images/icon-element.svg'
 import backgroundPattern1 from '../assets/images/background-pattern-1.jpg'
 import backgroundPattern2 from '../assets/images/background-pattern-2.jpg'
+import separatorImage from '../assets/images/separator-2.svg'
 import { TransitionFadeInUp } from './TransitionFadeInUp'
 
 export const Members = ({ id, title, content }) => {
@@ -60,6 +61,14 @@ export const Members = ({ id, title, content }) => {
 
         <EcoSystem className="Members__col-2-image" />
       </div>
+
+      <img
+        className="Members__separator"
+        src={separatorImage}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      />
     </section>
   )
 }
