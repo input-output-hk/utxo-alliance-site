@@ -9,13 +9,13 @@
     "target": "_self"
   },
   "navbar.links.1": {
-    "title": "Testimonials",
-    "href": "/#testimonials",
+    "title": "Members",
+    "href": "/#members",
     "target": "_self"
   },
   "navbar.links.2": {
-    "title": "Members",
-    "href": "/#members",
+    "title": "Testimonials",
+    "href": "/#testimonials",
     "target": "_self"
   },
   "navbar.links.3": {
