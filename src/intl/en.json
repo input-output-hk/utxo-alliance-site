@@ -29,36 +29,36 @@
     "target": "_self"
   },
 
-  "header.title": "Complete cross-chain collaboration",
+  "header.title": "Define the future of scalability, programmability, and interoperability",
   "header.video.provider": "youtube",
-  "header.video.embedId": "dQw4w9WgXcQ",
+  "header.video.embedId": "UP-kk1jUjkU",
 
   "who.title": "Who we are",
-  "who.content": "<p>The UTXO Alliance is a blockchain-focused, asset-agnostic initiative, created to kickstart collaboration across blockchains with shared characteristics.</p> <p>Our aim is to tap into the power of Unspent Transaction Outputs (UTXOs) to ensure a more secure, stable, and scalable web3 landscape.</p> <p>We also want to improve the way digital assets are exchanged. The more interoperability everyone has between blockchains using the same protocols, the more value we can derive from all of them.</p>",
+  "who.content": "<p>The UTXO Alliance is an initiative created to kickstart collaboration with individuals and organizations working to make the UTXO model more scalable, secure, and interoperable.</p> <p>We live in an age of rapid change and technological advancements. Nowhere is this more true than in the Blockchain industry.</p> <p>By encouraging those at the forefront of this technology to engage in shared efforts and initiatives, we can drive further development of critical infrastructure needed to drive broader adoption of blockchain technology.</p>",
 
   "what.title": "What we’re doing",
-  "what.content": "<p>The UTXO Alliance was created to ensure anyone can safely share digital assets, such as coins, tokens, data, and smart contracts, using blockchain technology. To do this, we need to grow participation, expand use cases, and both educate and inspire mainstream users.</p> <p>By encouraging those at the forefront of the technology to engage in shared efforts and initiatives, we aim to encourage proactive collaboration across research, expertise, and innovation in the blockchain space.</p>",
+  "what.content": "<p>At the heart of the UTXO Alliance lies our commitment to solving instrumental questions around how data is transferred between different blockchain environments - the amount of data used, the speed with which data is processed, transaction costs, and energy usage.</p> <p>Solving these questions will ensure that anyone can safely share digital assets, such as coins, tokens, data, and smart contracts across different blockchains. To achieve this goal, alliance members have a commitment to grow participation, expand use cases, and both educate and inspire mainstream users.</p>",
 
   "why.title": "Why it matters",
-  "why.content": "<p>Many people are waking up to what cryptocurrencies can offer – how they can create monetary value. We now need them to witness other blockchain strengths.</p> <p>At the UTXO Alliance, we believe that making it easier to transact across different blockchains will encourage broader use of the technology. To do this, we need to advocate interoperability across systems with similar outlooks – in this case, the UTXO model.</p> <p>Ultimately, the importance of this initiative concerns the use of data. It all comes down to inputs and outputs – the amount of data used, the speed with which data is processed, transaction costs, and energy usage.</p>",
+  "why.content": "<p>We believe that making it easier to transact across different blockchains will encourage greater use of the technology. To do this, we need to advocate interoperability across systems with similar outlooks – in this case, the UTXO model.</p> <p>Making the UTXO model more secure, reliable, and faster will not only increase potential use cases for peer to peer applications but it will also afford institutions and traditional sectors the assurance that blockchain can meet the demands and requirements needed to improve inefficiencies in legacy systems.</p>",
 
   "testimonials.title": "Testimonials",
   "testimonials.quotes.length": "4",
   "testimonials.quotes.0": {
-    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
-    "footer": "Salvador Dali, Surrealist, Draftsman"
+    "content": "<p>The UTxO ledger model, battle-tested by Bitcoin, remains the gold standard for security and scalability. The UTxO alliance is an important step towards ensuring that it will be the gold standard for interoperability, too.</p>",
+    "footer": "Manuel Chakravarty, Lambda Scientist Plutus Architect Cardano Foundation"
   },
   "testimonials.quotes.1": {
-    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
-    "footer": "Salvador Dali, Surrealist, Draftsman"
+    "content": "<p>Implementing the \"separation of duties\" principle, Bitcoin's visionary UTXO model is naturally more scalable and less prone to attacks than the account model. Many projects sharing this vision provide unique perspectives to extend UTXO's possibilities. This alliance enables interoperability and coevolution of its members, providing the world a superset of our advantages.</p>",
+    "footer": "Ren Zhang, Nervos"
   },
   "testimonials.quotes.2": {
-    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
-    "footer": "Salvador Dali, Surrealist, Draftsman"
+    "content": "<p>Extended UTxOs enable novel methods of computation in DLT systems that bridge the gap between hard-coded protocol behaviour and smart contracts. eUTxOs enable users to engage in complex interactions while retaining full local verifiability even from light clients.</p>",
+    "footer": "James Aman, Topl"
   },
   "testimonials.quotes.3": {
-    "content": "<p>Mistakes are almost always of a sacred nature. Never try to correct them. On the contrary: rationalize them, understand them thoroughly. After that, it will be possible for you to sublimate them.</p>",
-    "footer": "Salvador Dali, Surrealist, Draftsman"
+    "content": "<p>While it is well-known that UTXOs are better for blockchain scalability and simpler offchain protocols, extended UTXO model also allows for novel on-chain DeFi constructions with interesting properties.</p>",
+    "footer": "Alex Chepurnoy, Ergo"
   },
 
   "members.title": "Who should join?",
