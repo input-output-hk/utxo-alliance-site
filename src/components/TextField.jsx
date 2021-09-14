@@ -3,6 +3,7 @@ import React from 'react'
 export const TextField = ({
   id,
   label,
+  errorMessage,
   type = 'text',
   multiline = false,
   ...props
@@ -27,12 +28,16 @@ export const TextField = ({
       )}
 
       <TextFieldComponent
-        className="TextField__input"
+        className={`TextField__input ${errorMessage ? 'is-invalid' : null}`}
         id={id}
         placeholder={label}
         {...textFieldProps}
         {...props}
       />
+
+      {errorMessage && (
+        <div className="TextField__error-message">{errorMessage}</div>
+      )}
     </div>
   )
 }

@@ -1,90 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import axios from 'axios'
+import { Formik, Form as FormikForm, useField } from 'formik'
+import * as Yup from 'yup'
 import { Button } from './Button'
 import { TextField } from './TextField'
 import backgroundImage from '../assets/images/background-pattern-1.jpg'
 import { TransitionFadeInUp } from './TransitionFadeInUp'
+import { TransitionExpand } from './TransitionExpand'
 
-const stripHtml = (html) => {
-  var temporalDivElement = document.createElement('div')
-  temporalDivElement.innerHTML = html
-  return temporalDivElement.textContent || temporalDivElement.innerText || ''
-}
+const FormikTextField = ({ label, ...props }) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input>. We can use field meta to show an error
+  // message if the field is invalid and it has been touched (i.e. visited)
+  const [field, meta] = useField(props)
 
-const validateEmail = (email) => {
-  const re =
-    // eslint-disable-next-line no-useless-escape
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  return re.test(email)
-}
-
-const validateField = ({ input, name, value }) => {
-  switch (name) {
-    case 'email':
-      if (value.length > 0 && validateEmail(value)) {
-        input.classList.remove('is-invalid')
-        return false
-      } else {
-        input.classList.add('is-invalid')
-        return true
-      }
-    default:
-      if (value.length > 0) {
-        input.classList.remove('is-invalid')
-        return false
-      } else {
-        input.classList.add('is-invalid')
-        return true
-      }
-  }
+  return (
+    <TextField
+      label={label}
+      errorMessage={meta.touched && meta.error ? meta.error : null}
+      {...field}
+      {...props}
+    />
+  )
 }
 
 export const Form = ({ id, title, content, labels }) => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleChange = (event) => {
-    validateField({
-      input: event.target,
-      name: event.target.getAttribute('name'),
-      value: stripHtml(event.target.value).trim(),
-    })
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-
-    setIsSubmitting(true)
-
-    const inputs = [...event.target.querySelectorAll('[name]')].map(
-      (input) => ({
-        input,
-        name: input.getAttribute('name'),
-        value: stripHtml(input.value).trim(),
-      })
-    )
-
-    const errors = inputs.map(validateField).filter((error) => error)
-
-    if (errors.length) {
-      setIsSubmitting(false)
-
-      return
-    }
-
-    try {
-      await axios.post('hubspot form link here', {
-        fields: inputs.map(({ name, value }) => ({ name, value })),
-      })
-
-      setTimeout(() => {
-        event.target.reset()
-        setIsSubmitting(false)
-      }, 5000)
-    } catch (error) {
-      console.error({ error })
-      setIsSubmitting(false)
-    }
-  }
+  const [showMessage, setShowMessage] = useState(false)
+  const showMessageTimeout = useRef(null)
 
   return (
     <section id={id} className="Form">
@@ -109,83 +51,170 @@ export const Form = ({ id, title, content, labels }) => {
             data-transition-delay={250}
           />
 
-          <form
-            className="Form__form"
-            onSubmit={handleSubmit}
-            data-transition-element
-            data-transition-delay={500}
+          <Formik
+            initialValues={{
+              firstname: '',
+              lastname: '',
+              company: '',
+              email: '',
+              title_and_role_in_the_project: '',
+              why_do_you_want_to_join_the_utxo_alliance_: '',
+              how_or_what_would_you_contribute_to_the_utxo_alliance_: '',
+            }}
+            validationSchema={Yup.object({
+              firstname: Yup.string().required('Required'),
+              lastname: Yup.string().required('Required'),
+              company: Yup.string().required('Required'),
+              email: Yup.string()
+                .email('Invalid email address')
+                .required('Required'),
+              title_and_role_in_the_project: Yup.string().required('Required'),
+              why_do_you_want_to_join_the_utxo_alliance_:
+                Yup.string().required('Required'),
+              how_or_what_would_you_contribute_to_the_utxo_alliance_:
+                Yup.string().required('Required'),
+            })}
+            onSubmit={async (
+              values,
+              { setSubmitting, setStatus, resetForm }
+            ) => {
+              clearTimeout(showMessageTimeout.current)
+
+              setShowMessage(false)
+
+              const fields = Object.entries(values).map(([key, value]) => ({
+                name: key,
+                value,
+              }))
+
+              try {
+                const response = await axios.post(
+                  'https://api.hsforms.com/submissions/v3/integration/submit/8848114/2ee9cecc-f90d-4154-80de-e323c9c4ec33',
+                  { fields }
+                )
+
+                if (response.status === 200) {
+                  setStatus({
+                    success: true,
+                    message: response.data.inlineMessage,
+                  })
+
+                  setShowMessage(true)
+
+                  showMessageTimeout.current = setTimeout(() => {
+                    resetForm()
+                    setShowMessage(false)
+                  }, 5000)
+                } else {
+                  setStatus({
+                    success: false,
+                    message: "Sorry, we couldn't submit the form.",
+                  })
+
+                  setShowMessage(true)
+                }
+              } catch (error) {
+                console.error({ error })
+
+                setStatus({
+                  success: false,
+                  message: "Sorry, we couldn't submit the form.",
+                })
+
+                setShowMessage(true)
+              }
+
+              setSubmitting(false)
+            }}
           >
-            <div className="row">
-              <div className="col-md-6">
-                <TextField
-                  id={`${id}-name`}
-                  name="name"
-                  label={labels.name}
-                  onBlur={handleChange}
-                  onChange={handleChange}
-                />
-              </div>
+            {({ isSubmitting, status }) => (
+              <FormikForm
+                className="Form__form"
+                data-transition-element
+                data-transition-delay={500}
+              >
+                <div className="row">
+                  <div className="col-md-6">
+                    <FormikTextField
+                      id={`${id}-firstname`}
+                      name="firstname"
+                      label={labels.firstname}
+                    />
+                  </div>
 
-              <div className="col-md-6">
-                <TextField
-                  id={`${id}-company`}
-                  name="company"
-                  label={labels.company}
-                  onBlur={handleChange}
-                  onChange={handleChange}
-                />
-              </div>
+                  <div className="col-md-6">
+                    <FormikTextField
+                      id={`${id}-lastname`}
+                      name="lastname"
+                      label={labels.lastname}
+                    />
+                  </div>
 
-              <div className="col-md-6">
-                <TextField
-                  id={`${id}-email`}
-                  name="email"
-                  type="email"
-                  label={labels.email}
-                  onBlur={handleChange}
-                  onChange={handleChange}
-                />
-              </div>
+                  <div className="col-md-6">
+                    <FormikTextField
+                      id={`${id}-company`}
+                      name="company"
+                      label={labels.company}
+                    />
+                  </div>
 
-              <div className="col-md-6">
-                <TextField
-                  id={`${id}-role`}
-                  name="role"
-                  label={labels.role}
-                  onBlur={handleChange}
-                  onChange={handleChange}
-                />
-              </div>
+                  <div className="col-md-6">
+                    <FormikTextField
+                      id={`${id}-email`}
+                      name="email"
+                      type="email"
+                      label={labels.email}
+                    />
+                  </div>
 
-              <div className="col-md-6">
-                <TextField
-                  id={`${id}-textbox1`}
-                  name="textbox1"
-                  label={labels.textbox1}
-                  multiline
-                  onBlur={handleChange}
-                  onChange={handleChange}
-                />
-              </div>
+                  <div className="col-md-12">
+                    <FormikTextField
+                      id={`${id}-title_and_role_in_the_project`}
+                      name="title_and_role_in_the_project"
+                      label={labels.title_and_role_in_the_project}
+                    />
+                  </div>
 
-              <div className="col-md-6">
-                <TextField
-                  id={`${id}-textbox2`}
-                  name="textbox2"
-                  label={labels.textbox2}
-                  multiline
-                  onBlur={handleChange}
-                  onChange={handleChange}
-                />
-              </div>
+                  <div className="col-md-6">
+                    <FormikTextField
+                      id={`${id}-why_do_you_want_to_join_the_utxo_alliance_`}
+                      name="why_do_you_want_to_join_the_utxo_alliance_"
+                      label={labels.why_do_you_want_to_join_the_utxo_alliance_}
+                      multiline
+                    />
+                  </div>
 
-              <div className="col">
-                <Button type="submit" disabled={isSubmitting}>
-                  Submit
-                </Button>
-              </div>
-            </div>
-          </form>
+                  <div className="col-md-6">
+                    <FormikTextField
+                      id={`${id}-how_or_what_would_you_contribute_to_the_utxo_alliance_`}
+                      name="how_or_what_would_you_contribute_to_the_utxo_alliance_"
+                      label={
+                        labels.how_or_what_would_you_contribute_to_the_utxo_alliance_
+                      }
+                      multiline
+                    />
+                  </div>
+
+                  <div className="col">
+                    <Button type="submit" disabled={isSubmitting}>
+                      Submit
+                    </Button>
+                  </div>
+
+                  <div className="col-12">
+                    <TransitionExpand expand={showMessage}>
+                      <div
+                        className={`Form__form__message ${
+                          status?.success ? 'success' : 'error'
+                        }`}
+                        dangerouslySetInnerHTML={{ __html: status?.message }}
+                      />
+                    </TransitionExpand>
+                  </div>
+                </div>
+              </FormikForm>
+            )}
+          </Formik>
         </TransitionFadeInUp>
       </div>
     </section>

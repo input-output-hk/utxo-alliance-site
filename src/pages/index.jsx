@@ -102,12 +102,20 @@ const IndexPage = ({ intl, data }) => {
         title={intl.formatMessage({ id: 'form.title' })}
         content={intl.formatMessage({ id: 'form.content' })}
         labels={{
-          name: intl.formatMessage({ id: 'form.labels.name' }),
+          firstname: intl.formatMessage({ id: 'form.labels.firstname' }),
+          lastname: intl.formatMessage({ id: 'form.labels.lastname' }),
           company: intl.formatMessage({ id: 'form.labels.company' }),
           email: intl.formatMessage({ id: 'form.labels.email' }),
-          role: intl.formatMessage({ id: 'form.labels.role' }),
-          textbox1: intl.formatMessage({ id: 'form.labels.textbox1' }),
-          textbox2: intl.formatMessage({ id: 'form.labels.textbox2' }),
+          title_and_role_in_the_project: intl.formatMessage({
+            id: 'form.labels.title_and_role_in_the_project',
+          }),
+          why_do_you_want_to_join_the_utxo_alliance_: intl.formatMessage({
+            id: 'form.labels.why_do_you_want_to_join_the_utxo_alliance_',
+          }),
+          how_or_what_would_you_contribute_to_the_utxo_alliance_:
+            intl.formatMessage({
+              id: 'form.labels.how_or_what_would_you_contribute_to_the_utxo_alliance_',
+            }),
         }}
       />
     </Layout>

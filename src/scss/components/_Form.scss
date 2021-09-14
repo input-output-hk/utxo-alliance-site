@@ -52,5 +52,22 @@
     .TextField {
       margin-bottom: spacer(40);
     }
+
+    &__message {
+      margin: 0;
+      padding-top: spacer(40);
+
+      &.success {
+        color: $primary;
+      }
+
+      &.error {
+        color: $error;
+      }
+
+      & > *:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
   }
 }
