@@ -2,7 +2,7 @@
   "title": "UTXO Alliance",
   "meta.description": "Blockchain-focused, asset-agnostic initiative, created to kickstart collaboration across blockchains with shared characteristics.",
 
-  "navbar.links.length": "6",
+  "navbar.links.length": "5",
   "navbar.links.0": {
     "title": "About",
     "href": "/#about",
@@ -19,16 +19,11 @@
     "target": "_self"
   },
   "navbar.links.3": {
-    "title": "UTXO Model",
-    "href": "/#utxo-model",
-    "target": "_self"
-  },
-  "navbar.links.4": {
     "title": "FAQ",
     "href": "/#faq",
     "target": "_self"
   },
-  "navbar.links.5": {
+  "navbar.links.4": {
     "title": "Join",
     "href": "/#join",
     "target": "_self"

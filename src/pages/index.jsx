@@ -6,11 +6,11 @@ import { Header } from '../components/Header'
 import { About } from '../components/About'
 import { Testimonials } from '../components/Testimonials'
 import { Members } from '../components/Members'
-import { Video } from '../components/Video'
+// import { Video } from '../components/Video'
 import { Faqs } from '../components/Faqs'
 import { Form } from '../components/Form'
 import picturesElementPng from '../assets/images/pictures-element.png'
-import videoPosterJpg from '../assets/images/video-poster.jpg'
+// import videoPosterJpg from '../assets/images/video-poster.jpg'
 
 // markup
 const IndexPage = ({ intl, data }) => {
@@ -74,14 +74,14 @@ const IndexPage = ({ intl, data }) => {
         }))}
       />
 
-      <Video
+      {/* <Video
         id="utxo-model"
         preTitle={intl.formatMessage({ id: 'video.preTitle' })}
         title={intl.formatMessage({ id: 'video.title' })}
         provider={intl.formatMessage({ id: 'video.provider' })}
         embedId={intl.formatMessage({ id: 'video.embedId' })}
         poster={videoPosterJpg}
-      />
+      /> */}
 
       <Faqs
         id="faq"
