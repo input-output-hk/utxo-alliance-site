@@ -13,12 +13,16 @@
 
   &__title {
     position: absolute;
-    bottom: 2vw;
+    bottom: 0;
     left: 50%;
-    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 12.5vw;
     margin: 0;
     font-weight: $font-weight-bold;
-    font-size: 3.75vw;
+    font-size: 3.375vw;
     color: $color-8;
     text-align: center;
     transform: translateX(-50%);
@@ -61,8 +65,8 @@
     }
 
     &__title {
-      bottom: 1vw;
-      font-size: 3.5vw;
+      height: 10.75vw;
+      font-size: 2.875vw;
     }
 
     &__play-button {
@@ -83,8 +87,9 @@
     }
 
     &__title {
-      width: 40vw;
-      font-size: 3vw;
+      width: 50vw;
+      height: 9.5vw;
+      font-size: 2.625vw;
     }
 
     &__play-button {
@@ -100,9 +105,9 @@
     }
 
     &__title {
-      bottom: 1.125vw;
-      width: 30vw;
-      font-size: 2.5vw;
+      width: 45vw;
+      height: 8.75vw;
+      font-size: 2.375vw;
     }
 
     &__play-button {
