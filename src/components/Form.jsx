@@ -101,10 +101,7 @@ export const Form = ({ id, title, content, labels }) => {
 
                   setShowMessage(true)
 
-                  showMessageTimeout.current = setTimeout(() => {
-                    resetForm()
-                    setShowMessage(false)
-                  }, 5000)
+                  resetForm()
                 } else {
                   setStatus({
                     success: false,
@@ -123,6 +120,10 @@ export const Form = ({ id, title, content, labels }) => {
 
                 setShowMessage(true)
               }
+
+              showMessageTimeout.current = setTimeout(() => {
+                setShowMessage(false)
+              }, 5000)
 
               setSubmitting(false)
             }}
