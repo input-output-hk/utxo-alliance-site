@@ -45,14 +45,14 @@ export const EcoSystem = ({ className }) => {
       0
     )
 
-    tl.to(
-      '#EcoSystem__planet-2',
-      {
-        motionPath: { ...orbit2MotionPath, start: 0.8, end: 1.8 },
-        reversed: true,
-      },
-      0
-    )
+    // tl.to(
+    //   '#EcoSystem__planet-2',
+    //   {
+    //     motionPath: { ...orbit2MotionPath, start: 0.8, end: 1.8 },
+    //     reversed: true,
+    //   },
+    //   0
+    // )
 
     tl.to(
       '#EcoSystem__planet-3',
@@ -163,7 +163,7 @@ export const EcoSystem = ({ className }) => {
           className="EcoSystem__cls-3"
           d="M164.64 44.65l13.88 10.08a6 6 0 012.18 6.71l-5.3 16.3a6 6 0 01-5.7 4.15h-17.16a6 6 0 01-5.7-4.15l-5.3-16.3a6 6 0 012.18-6.71l13.87-10.08a6 6 0 017.05 0z"
         />
-        <g id="EcoSystem__planet-2" data-name="planet">
+        {/* <g id="EcoSystem__planet-2" data-name="planet">
           <ellipse
             className="EcoSystem__cls-4"
             cx={449.52}
@@ -180,7 +180,7 @@ export const EcoSystem = ({ className }) => {
               isolation: 'isolate',
             }}
           />
-        </g>
+        </g> */}
         <g id="EcoSystem__planet-3" data-name="planet">
           <ellipse
             className="EcoSystem__cls-4"
