@@ -123,12 +123,12 @@ export const Form = ({ id, title, content, labels }) => {
 
               showMessageTimeout.current = setTimeout(() => {
                 setShowMessage(false)
-              }, 5000)
+              }, 10000)
 
               setSubmitting(false)
             }}
           >
-            {({ isSubmitting, isValid, dirty }) => (
+            {({ isSubmitting }) => (
               <FormikForm
                 className="Form__form"
                 data-transition-element
