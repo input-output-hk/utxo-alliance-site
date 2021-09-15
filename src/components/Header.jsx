@@ -1,10 +1,12 @@
 import React from 'react'
-import headerShapes765wPng from '../assets/images/header-shapes-765w.png'
-import headerShapes1530wPng from '../assets/images/header-shapes-1530w.png'
-import headerShapes2295wPng from '../assets/images/header-shapes-2295w.png'
-import headerShapes3060wPng from '../assets/images/header-shapes-3060w.png'
 import { TransitionFadeInUp } from './TransitionFadeInUp'
 import { useVideoModal } from './VideoModal'
+import headerShapes574wPng from '../assets/images/header-shapes-574w.png'
+import headerShapes1435wPng from '../assets/images/header-shapes-1435w.png'
+import headerShapes1894wPng from '../assets/images/header-shapes-1894w.png'
+import headerShapes2870wPng from '../assets/images/header-shapes-2870w.png'
+import headerShapes4305wPng from '../assets/images/header-shapes-4305w.png'
+import headerShapes5740wPng from '../assets/images/header-shapes-5740w.png'
 
 export const Header = ({ title, video }) => {
   const setVideoModal = useVideoModal()
@@ -13,8 +15,9 @@ export const Header = ({ title, video }) => {
     <header className="Header">
       <img
         className="Header__shape"
-        src={headerShapes1530wPng}
-        srcSet={`${headerShapes765wPng} 765w, ${headerShapes1530wPng} 1530w, ${headerShapes2295wPng} 2295w, ${headerShapes3060wPng} 3060w`}
+        src={headerShapes1894wPng}
+        srcSet={`${headerShapes574wPng} 574w, ${headerShapes1435wPng} 1435w, ${headerShapes1894wPng} 1894w, ${headerShapes2870wPng} 2870w, ${headerShapes4305wPng} 4305w, ${headerShapes5740wPng} 5740w`}
+        sizes="100vw"
         alt=""
         aria-hidden="true"
       />

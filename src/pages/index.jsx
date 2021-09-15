@@ -9,7 +9,12 @@ import { Members } from '../components/Members'
 // import { Video } from '../components/Video'
 import { Faqs } from '../components/Faqs'
 import { Form } from '../components/Form'
-import picturesElementPng from '../assets/images/pictures-element.png'
+import picturesElement196wPng from '../assets/images/pictures-element-196w.png'
+import picturesElement490wPng from '../assets/images/pictures-element-490w.png'
+import picturesElement646wPng from '../assets/images/pictures-element-646w.png'
+import picturesElement979wPng from '../assets/images/pictures-element-979w.png'
+import picturesElement1469wPng from '../assets/images/pictures-element-1469w.png'
+import picturesElement1958wPng from '../assets/images/pictures-element-1958w.png'
 // import videoPosterJpg from '../assets/images/video-poster.jpg'
 
 // markup
@@ -45,7 +50,9 @@ const IndexPage = ({ intl, data }) => {
 
         <img
           className="pictures-element__image"
-          src={picturesElementPng}
+          src={picturesElement979wPng}
+          srcSet={`${picturesElement196wPng} 196w, ${picturesElement490wPng} 490w, ${picturesElement646wPng} 646w, ${picturesElement979wPng} 979w, ${picturesElement1469wPng} 1469w, ${picturesElement1958wPng} 1958w`}
+          sizes="42.5vw"
           alt=""
         />
       </div>
