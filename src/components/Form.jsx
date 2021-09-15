@@ -25,6 +25,7 @@ const FormikTextField = ({ label, ...props }) => {
 }
 
 export const Form = ({ id, title, content, labels }) => {
+  const [formStatus, setFormStatus] = useState(null)
   const [showMessage, setShowMessage] = useState(false)
   const showMessageTimeout = useRef(null)
 
@@ -74,10 +75,7 @@ export const Form = ({ id, title, content, labels }) => {
               how_or_what_would_you_contribute_to_the_utxo_alliance_:
                 Yup.string().required('Required'),
             })}
-            onSubmit={async (
-              values,
-              { setSubmitting, setStatus, resetForm }
-            ) => {
+            onSubmit={async (values, { setSubmitting, resetForm }) => {
               clearTimeout(showMessageTimeout.current)
 
               setShowMessage(false)
@@ -93,8 +91,10 @@ export const Form = ({ id, title, content, labels }) => {
                   { fields }
                 )
 
+                console.log('response:', response)
+
                 if (response.status === 200) {
-                  setStatus({
+                  setFormStatus({
                     success: true,
                     message: response.data.inlineMessage,
                   })
@@ -103,7 +103,7 @@ export const Form = ({ id, title, content, labels }) => {
 
                   resetForm()
                 } else {
-                  setStatus({
+                  setFormStatus({
                     success: false,
                     message: "Sorry, we couldn't submit the form.",
                   })
@@ -111,9 +111,9 @@ export const Form = ({ id, title, content, labels }) => {
                   setShowMessage(true)
                 }
               } catch (error) {
-                console.error({ error })
+                console.log('error:', error)
 
-                setStatus({
+                setFormStatus({
                   success: false,
                   message: "Sorry, we couldn't submit the form.",
                 })
@@ -128,7 +128,7 @@ export const Form = ({ id, title, content, labels }) => {
               setSubmitting(false)
             }}
           >
-            {({ isSubmitting, status }) => (
+            {({ isSubmitting, isValid, dirty }) => (
               <FormikForm
                 className="Form__form"
                 data-transition-element
@@ -206,9 +206,11 @@ export const Form = ({ id, title, content, labels }) => {
                     <TransitionExpand expand={showMessage}>
                       <div
                         className={`Form__form__message ${
-                          status?.success ? 'success' : 'error'
+                          formStatus?.success ? 'success' : 'error'
                         }`}
-                        dangerouslySetInnerHTML={{ __html: status?.message }}
+                        dangerouslySetInnerHTML={{
+                          __html: formStatus?.message,
+                        }}
                       />
                     </TransitionExpand>
                   </div>
