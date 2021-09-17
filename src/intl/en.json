@@ -46,7 +46,7 @@
   "testimonials.quotes.length": "4",
   "testimonials.quotes.0": {
     "content": "<p>The UTxO ledger model, battle-tested by Bitcoin, remains the gold standard for security and scalability. The UTxO alliance is an important step towards ensuring that it will be the gold standard for interoperability, too.</p>",
-    "footer": "Manuel Chakravarty, Lambda Scientist Plutus Architect Cardano Foundation"
+    "footer": "Manuel Chakravarty, Lambda Scientist Plutus Architect IOHK"
   },
   "testimonials.quotes.1": {
     "content": "<p>Implementing the \"separation of duties\" principle, Bitcoin's visionary UTXO model is naturally more scalable and less prone to attacks than the account model. Many projects sharing this vision provide unique perspectives to extend UTXO's possibilities. This alliance enables interoperability and coevolution of its members, providing the world a superset of our advantages.</p>",
