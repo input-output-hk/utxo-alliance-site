@@ -73,7 +73,7 @@
   "faqs.items.length": "5",
   "faqs.items.0": {
     "title": "What is a UTXO?",
-    "content": "<p>UTXO is an acronym for ‘Unspent Transaction Output’.</p> <p>UTXOs are components in a blockchain transaction – the parts that will be used. They’re like stores of value or outputs waiting to be assigned.</p> <p>In a transaction, instead of breaking down a set value (for example, 5 LTC) into smaller amounts (e.g. sending 3 LTC to Person A and keeping 2 LTC in a wallet), UTXOs treat each component as a separate output. Each is recorded as a separate ledger entry. They exist independently of each other. There’s no partial deduction.</p> <p>Looking at UTXOs from another angle, they function like metadata. They hold information about each transaction: where it’s from, what’s in it, when it was created, etc.</p>"
+    "content": "<p>UTXO is an acronym for ‘Unspent Transaction Output’.</p> <p>UTXOs are components in a blockchain transaction – the parts that will be used. They’re like stores of value or outputs waiting to be assigned.</p> <p>In a transaction, instead of breaking down a set value (for example, 5 BTC) into smaller amounts (e.g. sending 3 BTC to Person A and keeping 2 BTC in a wallet), UTXOs treat each component as a separate output. Each is recorded as a separate ledger entry. They exist independently of each other. There’s no partial deduction.</p> <p>Looking at UTXOs from another angle, they function like metadata. They hold information about each transaction: where it’s from, what’s in it, when it was created, etc.</p>"
   },
   "faqs.items.1": {
     "title": "Why an ‘Alliance’?",
