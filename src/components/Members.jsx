@@ -9,7 +9,7 @@ import { TransitionFadeInUp } from './TransitionFadeInUp'
 
 export const Members = ({ id, title, content }) => {
   return (
-    <section id={id} className="Members">
+    <section className="Members">
       <div className="Members__col-1">
         <img
           className="Members__col-1-background"
@@ -49,7 +49,7 @@ export const Members = ({ id, title, content }) => {
         </div>
       </div>
 
-      <div className="Members__col-2">
+      <div className="Members__col-2" id={id}>
         <img
           className="Members__col-2-background"
           src={backgroundPattern1}

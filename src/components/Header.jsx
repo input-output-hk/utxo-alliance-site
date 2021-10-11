@@ -1,5 +1,4 @@
 import React from 'react'
-import { TransitionFadeInUp } from './TransitionFadeInUp'
 import { useVideoModal } from './VideoModal'
 import headerShapes574wPng from '../assets/images/header-shapes-574w.png'
 import headerShapes1435wPng from '../assets/images/header-shapes-1435w.png'
@@ -23,9 +22,7 @@ export const Header = ({ title, video }) => {
       />
 
       <div className="container">
-        <TransitionFadeInUp>
-          <h1 className="Header__title">{title}</h1>
-        </TransitionFadeInUp>
+        <h1 className="Header__title">{title}</h1>
 
         {video.provider && video.embedId && (
           <button

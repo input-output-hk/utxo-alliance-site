@@ -43,7 +43,7 @@
   "why.content": "<p>We believe that making it easier to transact across different blockchains will encourage greater use of the technology. To do this, we need to advocate interoperability across systems with similar outlooks – in this case, the UTXO model.</p> <p>Making the UTXO model more secure, reliable, and faster will not only increase potential use cases for peer to peer applications but it will also afford institutions and traditional sectors the assurance that blockchain can meet the demands and requirements needed to improve inefficiencies in legacy systems.</p>",
 
   "testimonials.title": "Testimonials",
-  "testimonials.quotes.length": "4",
+  "testimonials.quotes.length": "5 ",
   "testimonials.quotes.0": {
     "content": "<p>The UTxO ledger model, battle-tested by Bitcoin, remains the gold standard for security and scalability. The UTxO alliance is an important step towards ensuring that it will be the gold standard for interoperability, too.</p>",
     "footer": "Manuel Chakravarty, Lambda Scientist Plutus Architect IOHK"
@@ -59,6 +59,10 @@
   "testimonials.quotes.3": {
     "content": "<p>While it is well-known that UTXOs are better for blockchain scalability and simpler offchain protocols, extended UTXO model also allows for novel on-chain DeFi constructions with interesting properties.</p>",
     "footer": "Alex Chepurnoy, Ergo"
+  },
+  "testimonials.quotes.4": {
+    "content": "<p>UTXO blockchains lay the basis and undisputed foundation of today's blockchain industry. UTXO technology reflects Satoshi Nakamoto's core vision of ultimate (financial) liberty. On behalf of Komodo Platform and the AtomicDEX team I am honored to join the UTXO Alliance to uphold and advance this vision. I am certain that together with the other alliance members we will bring this technology to the next level. All for one and one for all!</p>",
+    "footer": "Charles Gonzales, Komodo BizDev"
   },
 
   "members.title": "Who should join?",
@@ -115,6 +119,18 @@
   "footer.columns.1.links.0": {
     "title": "Contact us",
     "href": "https://iohk.io/contact/",
+    "target": "_blank"
+  },
+  "footer.columns.2.title": "Social Media",
+  "footer.columns.2.links.length": "2",
+  "footer.columns.2.links.0": {
+    "title": "Twitter",
+    "href": "https://twitter.com/AllianceUTXO",
+    "target": "_blank"
+  },
+  "footer.columns.2.links.1": {
+    "title": "LinkedIn",
+    "href": "https://www.linkedin.com/in/utxo-alliance-650743216",
     "target": "_blank"
   },
 
