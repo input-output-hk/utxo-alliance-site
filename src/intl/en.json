@@ -106,7 +106,7 @@
   "form.labels.why_do_you_want_to_join_the_utxo_alliance_": "Why do you want to join the UTXO Alliance?",
   "form.labels.how_or_what_would_you_contribute_to_the_utxo_alliance_": "How or what would you contribute to the UTXO Alliance?",
 
-  "footer.columns.length": "2",
+  "footer.columns.length": "3",
   "footer.columns.0.title": "Legal",
   "footer.columns.0.links.length": "1",
   "footer.columns.0.links.0": {
