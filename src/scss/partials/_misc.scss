@@ -4,14 +4,34 @@
   overflow: hidden;
 }
 
-.pictures-element {
+.pattern-background {
+  position: relative;
+  margin-top: -10%;
+  padding-top: 10%;
+
   .About {
     &:first-child {
-      margin-top: -10%;
-      padding-top: 20%;
+      .About__background {
+        display: none;
+      }
     }
   }
 
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.pictures-element {
   &__image {
     display: none;
   }

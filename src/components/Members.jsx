@@ -1,74 +1,101 @@
-import React from 'react'
-import { EcoSystem } from './EcoSystem'
-import logoSymbolSvg from '../assets/images/logo-symbol.svg'
-import iconElementSvg from '../assets/images/icon-element.svg'
-import backgroundPattern1 from '../assets/images/background-pattern-1.jpg'
-import backgroundPattern2 from '../assets/images/background-pattern-2.jpg'
-import separatorImage from '../assets/images/separator-2.svg'
+import React, { useEffect, useRef } from 'react'
 import { TransitionFadeInUp } from './TransitionFadeInUp'
+import logoAlephium from '../assets/logos/logo-alephium.svg'
+import logoCardano from '../assets/logos/logo-cardano.svg'
+import logoDigibyte from '../assets/logos/logo-digibyte.svg'
+import logoErgo from '../assets/logos/logo-ergo.svg'
+import logoInputOutput from '../assets/logos/logo-input-output.svg'
+import logoKomodo from '../assets/logos/logo-komodo.svg'
+import logoNervos from '../assets/logos/logo-nervos.svg'
+import logoTopl from '../assets/logos/logo-topl.svg'
 
-export const Members = ({ id, title, content }) => {
+const membersLogos = [
+  { logo: logoAlephium, link: 'https://alephium.org/' },
+  { logo: logoCardano, link: 'https://cardano.org/' },
+  { logo: logoDigibyte, link: 'https://digibyte.org/' },
+  { logo: logoErgo, link: 'https://ergoplatform.org/' },
+  { logo: logoInputOutput, link: 'http://iohk.io/' },
+  { logo: logoKomodo, link: 'https://komodoplatform.com/' },
+  { logo: logoNervos, link: 'https://www.nervos.org/' },
+  { logo: logoTopl, link: 'https://www.topl.co/' },
+]
+
+const slides = [...membersLogos, ...membersLogos, ...membersLogos]
+
+export const Members = ({ id, title, subtitle }) => {
+  const sliderEl = useRef(null)
+  const flkty = useRef(null)
+
+  useEffect(() => {
+    const flktyEl = sliderEl.current?.querySelector('.slider')
+
+    if (
+      typeof window === 'undefined' ||
+      typeof document === 'undefined' ||
+      !flktyEl
+    ) {
+      flkty.current?.destroy()
+      flkty.current = null
+
+      return
+    }
+
+    const Flickity = require('flickity')
+
+    flkty.current = new Flickity(flktyEl, {
+      prevNextButtons: false,
+      pageDots: false,
+      wrapAround: true,
+      contain: true,
+      autoPlay: 2000,
+      pauseAutoPlayOnHover: false,
+      selectedAttraction: 0.01,
+      friction: 0.15,
+      initialIndex: Math.floor(slides.length / 2),
+    })
+
+    return () => {
+      flkty.current?.destroy()
+      flkty.current = null
+    }
+  }, [])
+
   return (
-    <section className="Members">
-      <div className="Members__col-1">
-        <img
-          className="Members__col-1-background"
-          src={backgroundPattern2}
-          alt=""
-          role="presentation"
-          aria-hidden="true"
-          loading="lazy"
-        />
+    <section id={id} className="Members">
+      <TransitionFadeInUp group>
+        <div className="container">
+          <h2 className="Members__title" data-transition-element>
+            {title}
+          </h2>
 
-        <div className="Members__col-1-content">
-          <img className="Members__col-1-image" src={iconElementSvg} alt="" />
-
-          <TransitionFadeInUp group>
-            <h2 className="Members__col-1-title h1" data-transition-element>
-              {title}
-            </h2>
-
-            <div
-              className="Members__col-1-symbols"
-              role="presentation"
-              aria-hidden="true"
-              data-transition-element
-              data-transition-delay={250}
-            >
-              <img src={logoSymbolSvg} alt="" />
-              <img src={logoSymbolSvg} alt="" />
-            </div>
-
-            <div
-              className="Members__col-1-text"
-              dangerouslySetInnerHTML={{ __html: content }}
-              data-transition-element
-              data-transition-delay={500}
-            />
-          </TransitionFadeInUp>
+          <p
+            className="Members__subtitle"
+            data-transition-element
+            data-transition-delay={250}
+          >
+            {subtitle}
+          </p>
         </div>
-      </div>
 
-      <div className="Members__col-2" id={id}>
-        <img
-          className="Members__col-2-background"
-          src={backgroundPattern1}
-          alt=""
-          role="presentation"
-          aria-hidden="true"
-          loading="lazy"
-        />
-
-        <EcoSystem className="Members__col-2-image" />
-      </div>
-
-      <img
-        className="Members__separator"
-        src={separatorImage}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-      />
+        <div
+          ref={sliderEl}
+          className="Members__slider"
+          data-transition-element
+          data-transition-delay={500}
+        >
+          <div className="slider">
+            {slides.map(({ logo, link }, index) => {
+              return (
+                <figure key={index} className="Members__slide">
+                  <a href={link} target="_blank" rel="noreferrer noopener">
+                    <img src={logo} alt="" />
+                  </a>
+                </figure>
+              )
+            })}
+          </div>
+        </div>
+      </TransitionFadeInUp>
     </section>
   )
 }

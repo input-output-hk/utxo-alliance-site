@@ -6,6 +6,7 @@ import { Header } from '../components/Header'
 import { About } from '../components/About'
 import { Testimonials } from '../components/Testimonials'
 import { Members } from '../components/Members'
+import { Join } from '../components/Join'
 // import { Video } from '../components/Video'
 import { Faqs } from '../components/Faqs'
 import { Form } from '../components/Form'
@@ -15,6 +16,7 @@ import picturesElement646wPng from '../assets/images/pictures-element-646w.png'
 import picturesElement979wPng from '../assets/images/pictures-element-979w.png'
 import picturesElement1469wPng from '../assets/images/pictures-element-1469w.png'
 import picturesElement1958wPng from '../assets/images/pictures-element-1958w.png'
+import backgroundPattern1 from '../assets/images/background-pattern-1.jpg'
 // import videoPosterJpg from '../assets/images/video-poster.jpg'
 
 // markup
@@ -29,38 +31,53 @@ const IndexPage = ({ intl, data }) => {
         }}
       />
 
-      <div id="about" className="pictures-element">
-        <About
-          styleType={1}
-          title={intl.formatMessage({ id: 'who.title' })}
-          content={intl.formatMessage({ id: 'who.content' })}
-        />
-
-        <About
-          styleType={3}
-          title={intl.formatMessage({ id: 'what.title' })}
-          content={intl.formatMessage({ id: 'what.content' })}
-        />
-
-        <About
-          styleType={2}
-          title={intl.formatMessage({ id: 'why.title' })}
-          content={intl.formatMessage({ id: 'why.content' })}
-        />
-
+      <div className="pattern-background">
         <img
-          className="pictures-element__image"
-          src={picturesElement979wPng}
-          srcSet={`${picturesElement196wPng} 196w, ${picturesElement490wPng} 490w, ${picturesElement646wPng} 646w, ${picturesElement979wPng} 979w, ${picturesElement1469wPng} 1469w, ${picturesElement1958wPng} 1958w`}
-          sizes="42.5vw"
+          className="pattern-background__background"
+          src={backgroundPattern1}
           alt=""
+          aria-hidden="true"
+          loading="lazy"
         />
+
+        <Members
+          id="members"
+          title={intl.formatMessage({ id: 'members.title' })}
+          subtitle={intl.formatMessage({ id: 'members.subtitle' })}
+        />
+
+        <div id="about" className="pictures-element">
+          <About
+            styleType={1}
+            title={intl.formatMessage({ id: 'who.title' })}
+            content={intl.formatMessage({ id: 'who.content' })}
+          />
+
+          <About
+            styleType={3}
+            title={intl.formatMessage({ id: 'what.title' })}
+            content={intl.formatMessage({ id: 'what.content' })}
+          />
+
+          <About
+            styleType={2}
+            title={intl.formatMessage({ id: 'why.title' })}
+            content={intl.formatMessage({ id: 'why.content' })}
+          />
+
+          <img
+            className="pictures-element__image"
+            src={picturesElement979wPng}
+            srcSet={`${picturesElement196wPng} 196w, ${picturesElement490wPng} 490w, ${picturesElement646wPng} 646w, ${picturesElement979wPng} 979w, ${picturesElement1469wPng} 1469w, ${picturesElement1958wPng} 1958w`}
+            sizes="42.5vw"
+            alt=""
+          />
+        </div>
       </div>
 
-      <Members
-        id="members"
-        title={intl.formatMessage({ id: 'members.title' })}
-        content={intl.formatMessage({ id: 'members.content' })}
+      <Join
+        title={intl.formatMessage({ id: 'join.title' })}
+        content={intl.formatMessage({ id: 'join.content' })}
       />
 
       <Testimonials

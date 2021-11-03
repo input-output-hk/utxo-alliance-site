@@ -1,7 +1,7 @@
 .Testimonials {
   position: relative;
-  padding-top: rem(60);
-  padding-bottom: rem(120);
+  padding-top: rem(80);
+  padding-bottom: rem(100);
   color: $white;
   background-color: $color-3;
 
@@ -18,6 +18,18 @@
     user-select: none;
   }
 
+  &__separator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: rem(12);
+    transform: translateY(50%);
+    z-index: 10;
+    pointer-events: none;
+    user-select: none;
+  }
+
   &__title {
     margin: spacer(0, 0, 60);
     font-family: $font-family-base;
@@ -25,6 +37,11 @@
     font-weight: $font-weight-base;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(120);
   }
 }
 

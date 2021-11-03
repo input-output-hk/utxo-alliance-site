@@ -33,6 +33,9 @@
   "header.video.provider": "youtube",
   "header.video.embedId": "PJfwhkPs2J4",
 
+  "members.title": "Members",
+  "members.subtitle": "Industry Leaders + World-Class Collaboration",
+
   "who.title": "Who we are",
   "who.content": "<p>The UTXO Alliance is an initiative created to kickstart collaboration with individuals and organizations working to make the UTXO model more scalable, secure, and interoperable.</p> <p>We live in an age of rapid change and technological advancements. Nowhere is this more true than in the Blockchain industry.</p> <p>By encouraging those at the forefront of this technology to engage in shared efforts and initiatives, we can drive further development of critical infrastructure needed to drive broader adoption of blockchain technology.</p>",
 
@@ -41,6 +44,9 @@
 
   "why.title": "Why it matters",
   "why.content": "<p>We believe that making it easier to transact across different blockchains will encourage greater use of the technology. To do this, we need to advocate interoperability across systems with similar outlooks – in this case, the UTXO model.</p> <p>Making the UTXO model more secure, reliable, and faster will not only increase potential use cases for peer to peer applications but it will also afford institutions and traditional sectors the assurance that blockchain can meet the demands and requirements needed to improve inefficiencies in legacy systems.</p>",
+
+  "join.title": "Who should join?",
+  "join.content": "<p>Our UTXO Alliance members include some of the best and brightest blockchain minds out there. We’re looking for professionals and organisations that are developing the UTXO-based blockchain tools and techniques needed to evolve the standard; partners to take part in education, technical assistance, and information sessions.</p> <p>Anyone that’s committed to furthering this transformative technology with the drive, knowledge, and passion to do so is welcome to join.</p>",
 
   "testimonials.title": "Testimonials",
   "testimonials.quotes.length": "5 ",
@@ -64,9 +70,6 @@
     "content": "<p>UTXO blockchains lay the basis and undisputed foundation of today's blockchain industry. UTXO technology reflects Satoshi Nakamoto's core vision of ultimate (financial) liberty. On behalf of Komodo Platform and the AtomicDEX team I am honored to join the UTXO Alliance to uphold and advance this vision. I am certain that together with the other alliance members we will bring this technology to the next level. All for one and one for all!</p>",
     "footer": "Kadan Stadelman, Komodo BizDev"
   },
-
-  "members.title": "Who should join?",
-  "members.content": "<p>Our UTXO Alliance members include some of the best and brightest blockchain minds out there. We’re looking for professionals and organisations that are developing the UTXO-based blockchain tools and techniques needed to evolve the standard; partners to take part in education, technical assistance, and information sessions.</p> <p>Anyone that’s committed to furthering this transformative technology with the drive, knowledge, and passion to do so is welcome to join.</p>",
 
   "video.preTitle": "6 minutes video",
   "video.title": "Deep dive into the UTXO Alliance",
