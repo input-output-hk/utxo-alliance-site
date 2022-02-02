@@ -8,6 +8,7 @@ import logoInputOutput from '../assets/logos/logo-input-output.svg'
 import logoKomodo from '../assets/logos/logo-komodo.svg'
 import logoNervos from '../assets/logos/logo-nervos.svg'
 import logoTopl from '../assets/logos/logo-topl.svg'
+import logoHorizon from '../assets/logos/logo-horizon.svg'
 
 const membersLogos = [
   { logo: logoAlephium, link: 'https://alephium.org/' },
@@ -18,6 +19,7 @@ const membersLogos = [
   { logo: logoKomodo, link: 'https://komodoplatform.com/' },
   { logo: logoNervos, link: 'https://www.nervos.org/' },
   { logo: logoTopl, link: 'https://www.topl.co/' },
+  { logo: logoHorizon, link: 'https://horizenlabs.io/' },
 ]
 
 const slides = [...membersLogos, ...membersLogos, ...membersLogos]
