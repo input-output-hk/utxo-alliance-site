@@ -7,12 +7,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: ['G-JV5VXXP0SJ'],
-      },
-    },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',

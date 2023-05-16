@@ -6178,23 +6178,6 @@ gatsby-page-utils@^1.8.0:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
-gatsby-plugin-google-analytics@^3.3.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-3.8.0.tgz#6fc0a2e6ac6ecd9ae467f69dff5e5c51b270e2fa"
-  integrity sha512-g83KB7PJBNyExwgT0oaezJxPPH0wwEQtmxXpZNNLHbKqgfaHC4q1EQAolkky0TDCJalqFkPoyo681Z3DnMYx5Q==
-  dependencies:
-    "@babel/runtime" "^7.14.0"
-    minimatch "3.0.4"
-    web-vitals "^1.1.2"
-
-gatsby-plugin-google-gtag@^3.4.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.8.0.tgz#8272b0a78fd3336e3681c12fbf5cd17ca7710b68"
-  integrity sha512-f1fTdhoXfrB6oaZp/FlNVRxmr8SXqLKvKPldXCtobxeGpzNekjnGvsaeqFC9yPT4mOk/hnB1R1bLKXuv6iXk7A==
-  dependencies:
-    "@babel/runtime" "^7.14.0"
-    minimatch "^3.0.4"
-
 gatsby-plugin-i18n@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-i18n/-/gatsby-plugin-i18n-1.0.1.tgz#573fb98b85654c29e0cda50740037061fa38e694"
