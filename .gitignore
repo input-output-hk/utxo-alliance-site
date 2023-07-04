@@ -14,3 +14,4 @@ public
 *ngrok
 nbproject
 Thumbs.db
+.env*
