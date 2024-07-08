@@ -10,6 +10,7 @@ import logoNervos from '../assets/logos/logo-nervos.svg'
 import logoTopl from '../assets/logos/logo-topl.svg'
 import logoHorizon from '../assets/logos/logo-horizon.svg'
 import logoWolfram from '../assets/logos/logo-wolfram.svg'
+import logoWolfram from '../assets/logos/logo-fractal.svg'
 
 const membersLogos = [
   { logo: logoAlephium, link: 'https://alephium.org/' },
@@ -21,7 +22,8 @@ const membersLogos = [
   { logo: logoNervos, link: 'https://www.nervos.org/' },
   { logo: logoTopl, link: 'https://www.topl.co/' },
   { logo: logoHorizon, link: 'https://horizenlabs.io/' },
-  { logo: logoWolfram, link: 'https://www.wolframblockchainlabs.com/' }
+  { logo: logoWolfram, link: 'https://www.wolframblockchainlabs.com/' },
+  { logo: logoFractal, link: 'https://www.fra.tech' }
 ]
 
 const slides = [...membersLogos, ...membersLogos, ...membersLogos]
