@@ -10,7 +10,7 @@ import logoNervos from '../assets/logos/logo-nervos.svg'
 import logoTopl from '../assets/logos/logo-topl.svg'
 import logoHorizon from '../assets/logos/logo-horizon.svg'
 import logoWolfram from '../assets/logos/logo-wolfram.svg'
-import logoWolfram from '../assets/logos/logo-fractal.svg'
+import logoFractal from '../assets/logos/logo-fractal.svg'
 
 const membersLogos = [
   { logo: logoAlephium, link: 'https://alephium.org/' },
