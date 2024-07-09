@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 254.66667 238.66667"
+   height="238.66667"
+   width="254.66667"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><clipPath
+       id="clipPath18"
+       clipPathUnits="userSpaceOnUse"><path
+         style="clip-rule:evenodd"
+         id="path16"
+         d="M 0,0 H 191 V 179 H 0 Z" /></clipPath></defs><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,238.66667)"
+     id="g10"><g
+       id="g12"><g
+         clip-path="url(#clipPath18)"
+         id="g14"><path
+           id="path20"
+           style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="m 0,0.3092 h 193.964 v 178.691 H 0 Z" /><g
+           transform="translate(29.2374,109.27)"
+           id="g22"><text
+             id="text26"
+             style="font-variant:normal;font-weight:800;font-size:68.94539642px;font-family:TheSans;-inkscape-font-specification:TheSans-B8ExtraBold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="scale(1,-1)"><tspan
+               id="tspan24"
+               y="0"
+               x="0">U</tspan></text>
+</g><g
+           transform="translate(76.01,109.27)"
+           id="g28"><text
+             id="text32"
+             style="font-variant:normal;font-weight:800;font-size:68.94539642px;font-family:TheSans;-inkscape-font-specification:TheSans-B8ExtraBold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="scale(1,-1)"><tspan
+               id="tspan30"
+               y="0"
+               x="0 37.395985">ZH</tspan></text>
+</g><g
+           transform="translate(13.9,65.8535)"
+           id="g34"><text
+             id="text38"
+             style="font-variant:normal;font-size:34.03639984px;font-family:TheSans;-inkscape-font-specification:TheSans-LP7Bld;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="scale(1,-1)"><tspan
+               id="tspan36"
+               y="0"
+               x="0 20.023615 29.359798 48.464432 63.212402 81.295944 96.043915 115.7612 133.87877 143.21497">Blockchain</tspan></text>
+</g><g
+           transform="translate(42.5322,23.3071)"
+           id="g40"><text
+             id="text44"
+             style="font-variant:normal;font-size:34.03639984px;font-family:TheSans;-inkscape-font-specification:TheSans-LP7Bld;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="scale(1,-1)"><tspan
+               id="tspan42"
+               y="0"
+               x="0 19.557316 37.344738 57.072235 70.128601 87.916023">Center</tspan></text>
+</g></g></g></g></svg>

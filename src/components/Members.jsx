@@ -11,6 +11,7 @@ import logoTopl from '../assets/logos/logo-topl.svg'
 import logoHorizon from '../assets/logos/logo-horizon.svg'
 import logoWolfram from '../assets/logos/logo-wolfram.svg'
 import logoFractal from '../assets/logos/logo-fractal.svg'
+import logoUzhBcc from '../assets/logos/logo-uzh-bcc.svg'
 
 const membersLogos = [
   { logo: logoAlephium, link: 'https://alephium.org/' },
@@ -23,7 +24,8 @@ const membersLogos = [
   { logo: logoTopl, link: 'https://www.topl.co/' },
   { logo: logoHorizon, link: 'https://horizenlabs.io/' },
   { logo: logoWolfram, link: 'https://www.wolframblockchainlabs.com/' },
-  { logo: logoFractal, link: 'https://www.fra.tech' }
+  { logo: logoFractal, link: 'https://www.fra.tech/' },
+  { logo: logoUzhBcc, link: 'https://www.blockchain.uzh.ch/' },
 ]
 
 const slides = [...membersLogos, ...membersLogos, ...membersLogos]
