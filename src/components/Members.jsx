@@ -12,7 +12,7 @@ import logoHorizon from '../assets/logos/logo-horizon.svg'
 import logoWolfram from '../assets/logos/logo-wolfram.svg'
 import logoFractal from '../assets/logos/logo-fractal.svg'
 import logoUzhBcc from '../assets/logos/logo-uzh-bcc.svg'
-import logoQuai from '../assets/logos/logo-quai-network-black.svg'
+import logoQuai from '../assets/logos/logo-quai-network.svg'
 
 const membersLogos = [
   { logo: logoAlephium, link: 'https://alephium.org/' },
