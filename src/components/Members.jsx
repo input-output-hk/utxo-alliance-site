@@ -12,6 +12,7 @@ import logoHorizon from '../assets/logos/logo-horizon.svg'
 import logoWolfram from '../assets/logos/logo-wolfram.svg'
 import logoFractal from '../assets/logos/logo-fractal.svg'
 import logoUzhBcc from '../assets/logos/logo-uzh-bcc.svg'
+import logoQuai from '../assets/logos/logo-quai-network-black.svg'
 
 const membersLogos = [
   { logo: logoAlephium, link: 'https://alephium.org/' },
@@ -26,6 +27,7 @@ const membersLogos = [
   { logo: logoWolfram, link: 'https://www.wolframblockchainlabs.com/' },
   { logo: logoFractal, link: 'https://www.fra.tech/' },
   { logo: logoUzhBcc, link: 'https://www.blockchain.uzh.ch/' },
+  { logo: logoQuai, link: 'https://qu.ai/' },
 ]
 
 const slides = [...membersLogos, ...membersLogos, ...membersLogos]
