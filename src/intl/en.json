@@ -114,7 +114,7 @@
   "footer.columns.0.links.length": "1",
   "footer.columns.0.links.0": {
     "title": "Privacy Policy",
-    "href": "https://github.com/input-output-hk/utxo-alliance-site/static/utxo_alliance_data_privacy_policy.pdf",
+    "href": "https://github.com/input-output-hk/utxo-alliance-site/blob/master/static/utxo_alliance_data_privacy_policy.pdf",
     "target": "_blank"
   },
   "footer.columns.1.title": "Contact",
