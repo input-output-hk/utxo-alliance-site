@@ -10,7 +10,6 @@ import logoNervos from '../assets/logos/logo-nervos.svg'
 import logoTopl from '../assets/logos/logo-topl.svg'
 import logoHorizon from '../assets/logos/logo-horizon.svg'
 import logoWolfram from '../assets/logos/logo-wolfram.svg'
-import logoFractal from '../assets/logos/logo-fractal.svg'
 import logoUzhBcc from '../assets/logos/logo-uzh-bcc.svg'
 import logoQuai from '../assets/logos/logo-quai-network-black.svg'
 
@@ -25,7 +24,6 @@ const membersLogos = [
   { logo: logoTopl, link: 'https://www.topl.co/' },
   { logo: logoHorizon, link: 'https://horizenlabs.io/' },
   { logo: logoWolfram, link: 'https://www.wolframblockchainlabs.com/' },
-  { logo: logoFractal, link: 'https://www.fra.tech/' },
   { logo: logoUzhBcc, link: 'https://www.blockchain.uzh.ch/' },
   { logo: logoQuai, link: 'https://qu.ai/' },
 ]
